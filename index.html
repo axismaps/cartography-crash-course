@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cartography Crash Course</title>
+    <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic|PT+Serif:400,700' rel='stylesheet' type='text/css'>
+    <style>
+
+      body { font-family: 'PT Serif'; }
+      h1, h2, h3 {
+        font-family: 'PT Sans';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Intro
+
+---
+
+# Overview
+
+This is a cartographic crash course. Mastery of mapping takes a lot of learning—and a lot more than a few hours!
+
+Today's goal is to provide a hands-on introduction to some common mapping concepts, data, and technologies, and to provide resources for further learning.
+
+---
+
+# At a glance
+
+1. Core cartography concepts
+2. Geographic data
+4. Static (print) map workflows
+4. Interactive (web) map workflows
+
+---
+
+# What is a map?
+
+Sounds like a silly question, but it's important to recognize the **what** and **why** of maps.
+
+---
+
+# Textbook definition
+
+(okay, wtf, none of my actual textbooks seem to give a definition)
+
+A map is a *representation* of a place.
+
+It is some human's interpretation of the place. It reflects choices and biases of the mapmaker.
+It does not and cannot represent **everything** in the place. Things must be omitted, simplified, etc. for the map to make any sense.
+
+---
+
+# Types of maps
+
+Reference maps: emphasize the location of spatial phenomena, e.g. topographic maps or road maps.
+
+Thematic maps: emphasize the spatial pattern of geographic attributes, e.g. population density or income.
+(Slocum et al.)
+
+---
+
+# Common types of thematic maps
+
+(explain these briefly)
+
+---
+
+Choropleth
+
+---
+
+Proportional symbol maps
+
+---
+
+Isarithmic maps
+
+---
+
+Dot density maps
+
+---
+
+(other common types?)
+
+---
+
+(show quick gallery of more map types)
+
+---
+
+# Map medium etc.
+
+Static map: an image, either in print or on the web
+
+Interactive map: usually web-based, on a computer, phone, etc.
+
+… and things like size, environment in which map will be used
+
+---
+
+# When to map
+
+Just because data *can* be mapped doesn't mean it *should* be mapped. Think about whether geography is important to your story. If not, consider other ways to visualize it, or simply provide a table.
+
+http://www.ericson.net/content/2011/10/when-maps-shouldnt-be-maps/
+
+---
+
+# Map design
+
+(don't dwell *too* long on any of the following, but they're worth talking about)
+
+---
+
+Visual variables
+
+---
+
+Color
+
+---
+
+Data classification
+
+http://uxblog.idvsolutions.com/2011/10/telling-truth.html
+
+---
+
+Scale and Generalization
+
+---
+
+Projection http://mjfoster83.github.io/projections/index.html#/
+
+---
+
+Text
+
+---
+
+...Getting this stuff right requires learning and experience. Look to the literature and to good examples.
+
+---
+
+# Recommended reading
+
+http://www.axismaps.com/guide/
+
+Making Maps, Krygier and Wood
+
+(more links and books)
+
+---
+
+# Geographic data
+
+---
+
+Here we'll focus on some common types and sources of geographic data. Fair warning, though: geographic data can be a mess. Getting your data into a mappable format is often half the job, if not more.
+
+---
+
+# Basics of geographic data
+
+Vector: shapes defined by geometry. Points, lines, and areas.
+
+Raster: image data, defined by pixels, for example satellite imagery
+
+---
+
+# Basics of geographic data
+
+Most geographic data has two components:
+
+1. Location (e.g., latitude and longitude, geometry)
+2. Attributes (information or numerical data about the feature)
+
+---
+
+# Data formats
+
+Tabular, e.g. a CSV table of points
+
+Shapefile: the longtime standard, actually a collection of files. Clunky but still prevalent.
+
+GeoJSON: common for web maps. Easily consumed by javascript code.
+
+Databases: e.g., PostGIS
+
+https://4326.us/maptime-data-formats/#/
+
+---
+
+# Let’s look at some data files
+
+(show some data)
+
+---
+
+# Geocoding
+
+With point data, if you're lucky it will have latitude and longitude information. Sometimes you only have addresses, though. Turning those addresses into lat/lon points requires a process called geocoding. (find some links to good geocoding services here)
+
+---
+
+# Data sources
+
+---
+
+# OpenStreetMap
+
+Open, free, editable map of the world. The standard street map data source in the open source world.
+
+(show short demo)
+
+(data download links)
+
+http://maptimeboston.github.io/osm-101/#0
+
+---
+
+# Natural Earth
+
+Free basemap cartographic reference data
+
+http://www.naturalearthdata.com/
+
+(show site/examples)
+
+---
+
+# Government data
+
+Census
+
+Look for state and local GIS sites
+
+---
+
+(additional data source links)
+
+---
+
+# Let’s get some data!
+
+(Grab some NE base data, OSM roads, and something thematic)
+
+---
+
+# Working with data
+
+---
+
+Typical things we might want to do with data before the final map:
+
+Clean it up
+
+Calculate values (e.g. pop density)
+
+Categorize, filter, etc.
+
+Spatial operations (geoprocessing)
+
+---
+
+# Tools for working with data
+
+Spreadsheets
+
+Text editors (the power of find &amp; replace, and regex!)
+
+Database tools and commands
+
+GIS (we’ll get to this in a moment)
+
+(links to some tools)
+
+---
+
+# Converting between data formats
+
+Often needs to happen when preparing data for a web map.
+
+Can use QGIS (demo coming up), or tools like mapshaper etc.
+
+---
+
+# Let’s make a map!
+
+---
+
+# A basic map workflow
+
+1. Acquire data
+2. Clean and edit data as necessary
+3. Import data to GIS
+4. Further geodata processing if needed
+5. Symbolize data and lay out map including other elements
+6. Export map to image, or vector format for further design work
+
+---
+
+# GIS
+
+Geographic Information System
+
+Wikipedia: “a system designed to capture, store, manipulate, analyze, manage, and present all types of spatial or geographical data.”
+
+A lot of tools, sets of tools, or operations can fall under this umbrella; however “GIS” often refers to a single piece of software.
+
+---
+
+# GIS
+
+ArcGIS by Esri has long reigned supreme as *the* GIS software. It’s powerful, and everywhere… but also expensive.
+
+---
+
+# GIS
+
+QGIS is the open-source GIS software of choice. It’s growing more awesome every day and has an excellent community of users. This is what we’ll use to make a map today.
+
+---
+
+# Let’s do it!
+
+We only have time for a brief look at a few of the features of QGIS. For a more in-depth guide, Mike’s tutorial http://maptimeboston.github.io/qgis-101/#0 (plus other resources)
+
+---
+
+(just demo things in the following sections; make slides for future reference)
+TBD: what data to use &amp; what map to make!
+Ideally combine different data sources and/or types
+
+---
+
+There's a lot going on in QGIS. But most of the time, for basic mapping, you'll likely only use a handful of core tools.
+
+![QGIS UI](images/qgis_tools.png)
+
+---
+
+# Layers
+
+Most maps in GIS are organized in terms of **layers**. Each layer represents a geographic data set (e.g., country outlines or city points), or some kind of annotation.
+
+[image of layers]
+
+---
+
+# Importing data
+
+For many formats, just open it
+
+CSV joins
+
+---
+
+# Map properties
+
+Projection
+
+Background color
+
+---
+
+# Attributes
+
+Attribute table
+
+Field calculator
+
+Identify tool
+
+Selecting by attributes
+
+---
+
+# Symbolizing data
+
+Colors, sizes
+
+Choose styles layer-wide, or based on attributes
+
+http://qgis.spatialthoughts.com/2012/02/tutorial-styling-vector-data-in-qgis.html
+
+---
+
+# Editing data
+
+Geometry, attributes
+
+Sadly QGIS can only edit geometry of shapefiles
+
+---
+
+# Geoprocessing
+
+Advanced calculations, transformations of geometry, etc.
+
+---
+
+# Map layout and export
+
+Print composer, ugh
+
+Really nice maps can be made with QGIS alone, but most professional cartos will refine further in a graphics program, e.g. Inkscape
+
+---
+
+# Recap
+
+Rundown of what QGIS (GIS in general) can do
+
+Typical steps in a map workflow
+
+Links to learning resources
+
+---
+
+# Also
+
+List some other ways to make static maps
+
+---
+
+# Web maps
+
+
+---
+
+# What is a web map?
+
+We don’t mean simply a map on the web (which could include static images), but maps more powered by the web: interactive, code-driven, live data, animated, etc. etc.
+It could be a reference map like Google, or a data-driven map (NYT etc.), or anything in between
+
+https://github.com/maptimeBoston/web-maps-101
+
+---
+
+# When should a map be interactive?
+
+The web makes it tempting to go bananas and throw everything into a map, with all kinds of interaction and data and everything. Design carefully for your purpose. The map still needs to look good, and have a good user experience. Especially bear this in mind if your users are only going to spend 15 seconds looking at the thing.
+
+---
+
+# Web map design considerations
+
+Most of the static map rules apply
+
+mobile!
+
+...and some other stuff
+
+(list)
+
+---
+
+# Web map technology
+
+Web mapping is a quickly evolving arena, technically. Your options will seem more diverse than the static GIS world, and often come with a steeper learning curve. But several companies do focus on products and services aimed at lowering the barrier of entry.
+
+---
+
+# Web mapping products/services
+
+(list some, Mapbox etc.)
+
+---
+
+# Building your own web map
+
+Those companies are happy to show you how to use their products. Today we’re going to show a more DIY approach in order to introduce some of the fundamental technology of web maps.
+
+---
+
+# Web map architecture
+
+Most web maps will have at least two things: data and code. Sometimes that’s it, e.g. many NYT interactives.
+Often, a third component: a basemap (define basemap here). Sometimes that basemap IS the only data, and sometimes there is data on top of it.
+
+---
+
+# Slippy map
+
+A map that can be panned and zoomed (like Google Maps) is sometimes called a “slippy map” in the lingo. Most slippy maps are:
+
+1. In the mercator projection
+2. Tiled (either as images or vector data)
+3. (there’s gotta be something else!)
+
+See Anatomy of a Web Map etc.
+
+---
+
+# Building a custom slippy map
+
+Leaflet is the most popular open-source javascript library. It is lightweight and easy to use, supporting basic map interactions, tiled map layers, and vector data layers (such as geojson data). It’s a good place to start a journey of custom web mapping.
+
+(Demo a simple Leaflet map)
+
+http://maptimeboston.github.io/leaflet-intro/
+
+---
+
+# Let’s make a web map!
+
+(breeze over a lot of this as needed. There just isn’t time to teach every detail)
+
+This will be a simplified demo that provides a taste of a web mapping workflow. As always, it takes a lot of learning and work to really master web maps. Learning to code is of course a big part of that, if you’re not already a coder.
+Fortunately, there are tons of resources and an amazing open mapping community to assist you in learning this stuff. (Many links to be provided shortly)
+
+[Need some non-headache way to get people running local servers, or maybe there is some online sandbox?]
+
+---
+
+# Beginning at the end
+
+Just want to show how simple a basic web map looks from a technical standpoint. It’s not intimidating.
+(Show end product of whatever we’re making here, and the code which won’t be too long)
+
+---
+
+# Anatomy of *this* web map:
+
+- Our data
+- A basemap
+- html/js code
+
+---
+
+# Basic setup
+
+Html page
+
+Import leaflet libraries
+
+---
+
+# We need a basemap!
+
+Unlike a static map, where the extent of your base data is limited, on a web map it usually covers many scales and often vast areas. This means a LOT of data and design decisions. (For example see how you get more detail as you zoom into Google, and the designs change.) Therefore a making a basemap on your own can be a huge task. We’ll point out some resources and services for doing just that, but very often you’ll be using a pre-made (whether by you or by someone else) basemap.
+
+---
+
+# Choosing a basemap
+
+Show some sources. Leaflet providers demo thing.
+
+You can’t (legally) just pull in Google’s map, etc. Go with OSM-based maps.
+
+---
+
+# Loading basemap into Leaflet
+
+Boom, just like that we have a map.
+
+Set initial location, zoom, etc.
+
+---
+
+# Data
+
+Cool, now we want our own data.
+
+Whatever it is, start with a shapefile or something so we can show conversion to geojson
+
+---
+
+# Loading data to leaflet
+
+L.geojson
+
+Open web inspector maybe? Show the html/svg structure of the map
+
+---
+
+# Customizing &amp; getting more advanced
+
+Styling (do a choropleth or proportional symbol or something)
+Interaction (hovers, popups)
+
+---
+
+# And beyond…
+
+With more coding, you can do awesome things.
+
+(list of more leaflet and/or map-ish js resources. in-depth stuff like DUSPviz)
+
+---
+
+# Additional options for web maps
+
+D3
+
+Mapbox
+
+CartoDB (good place to start for out-of-the-box maps of your data)
+
+Esri?
+
+---
+
+# More web map resources
+
+(links)
+
+---
+
+# (Web mapping summary)
+
+---
+
+# Summary of everything!
+
+If possible to distill like 10 tips/thoughts/suggestions/tools/resources, that would be cool
+
+---
+
+# Learning more
+
+Maptime!
+
+And whatever
+
+Remember to plug NACIS! And bring #stickers etc.
+
+---
+
+# links, links, links
+
+List like a billion resource links here, including things mentioned in previous slides
+
+---
+
+# links
+
+http://tolomaps.com/resources/
+
+http://mapschool.io/
+
+http://axismaps.github.io/thematic-cartography/
+
+http://uxblog.idvsolutions.com/2013/10/20-unrequested-map-tips-part-1.html
+
+http://uxblog.idvsolutions.com/2013/11/20-unrequested-map-tips-part-2.html
+
+http://academy.cartodb.com/courses/design-for-beginners/
+
+http://www.macwright.org/2015/03/23/geojson-second-bite.html
+
+http://www.graphicarto.com/the-lost-art-of-critical-map-reading/
+
+http://duspviz.mit.edu/
+
+https://github.com/nvkelso/geo-how-to
+
+https://www.mapbox.com/help/
+
+http://maptimeboston.github.io/d3-maptime/#/
+
+https://docs.google.com/document/d/1pjrX7F3w9X1987aAtSvR88aa_UM9YnMfxmr5qDUi6Pc/edit?usp=sharing
+
+http://enipedia.tudelft.nl/wiki/Google_Refine_Tutorial
+
+http://maptimeatx.github.io/intro-to-turf/
+
+http://maptimeatx.github.io/cartodb-exercises/
+
+https://github.com/maptime/hrva/blob/master/meetings.md
+
+https://github.com/maptime/dc/wiki/Geodata-Sources
+
+https://github.com/maptime/dc/wiki/CartoDB-Tutorial---February-23,-2016
+
+https://github.com/pelias/pelias
+
+http://esri.github.io/esri-leaflet/
+
+https://github.com/Esri/geodev-hackerlabs/blob/gh-pages/develop/locate_query_leaflet.md
+
+https://github.com/maptimedet/intro-web-mapping
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create({
+        navigation: {
+          scroll: false
+        }
+      });
+    </script>
+  </body>
+</html>

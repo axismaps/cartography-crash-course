@@ -3,18 +3,37 @@
   <head>
     <title>Cartography Crash Course</title>
     <meta charset="utf-8">
-    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic|PT+Serif:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic|Open+Serif:400,700' rel='stylesheet' type='text/css'>
     <style>
 
-      body { font-family: 'PT Serif'; }
+      body { font-family: 'Open Serif'; }
       h1, h2, h3 {
-        font-family: 'PT Sans';
-        font-weight: normal;
+        font-family: 'Open Sans';
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      h2 {
+        margin: 15px 0;
       }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
       img {
         max-width: 100%;
         max-height: 100%;
+      }
+      .remark-slide-content{ background-size: cover !important; }
+      .remark-slide-content h1 {
+          font-size: 72px;
+      }
+      .white {
+        color: white;
+        text-shadow: black 2px 2px 4px, #999 -1px -1px 1px;
+      }
+      .float-right{
+        float: right;
+      }
+      .caption {
+        font: normal 14px/16px 'Open Sans';
+        color: #999;
       }
     </style>
   </head>
@@ -61,34 +80,90 @@ It does not and cannot represent **everything** in the place. Things must be omi
 
 ---
 
-# Types of maps
+## Types of maps
 
-Reference maps: emphasize the location of spatial phenomena, e.g. topographic maps or road maps.
+**Reference maps:** emphasize the **location** of spatial phenomena, e.g. topographic maps or road maps.
 
-Thematic maps: emphasize the spatial pattern of geographic attributes, e.g. population density or income.
+**Thematic maps:** emphasize the **spatial pattern** of geographic attributes, e.g. population density or income.
+
 (Slocum et al.)
 
+When making a thematic map in particular, it's important the understand the nature of the geographic phenomena being mapped.
+
 ---
+
+## Geographic phenomena
+
+**Discrete phenomena** occur at distinct locations, e.g. indivudal people.  
+**Continuous phenomena** occur all over a region, e.g. elevation.
+
+**Abrupt phenomena** change suddenly, e.g. electoral votes per state.  
+**Continuous phenomena** change gradually, e.g. temperature
+
+![](images/abrupt_discrete.jpg)  
+.caption[Alan MacEachren]
+
+---
+
+## Levels of measurement
+
+Data produced from geographic phenomena may be **qualitative** (no numerical values) or **quantitative** (numerical values), or more specifically, one of four **levels of measurement**.
+
+**Nominal:** categorical and non-ordered, e.g. official languages
+
+**Ordinal:** ordered, but non-numerical, e.g. "Low", "Medium", and "High"
+
+**Interval:** ordered, with understood numerical differences, but an arbitrary zero point, e.g. Farhenheit or Celsius temperature scales
+
+**Ratio:** full-on numerical, with a non-arbitrary zero, e.g. population. (Ratio is the most common numerical data type.)
+
+---
+
+class: middle, center
 
 # Common types of thematic maps
 
 (explain these briefly)
 
 ---
+background-image: url(images/choropleth.png)
+class: center, middle, white
 
-Choropleth
-
----
-
-Proportional symbol maps
+# Choropleth
 
 ---
 
-Isarithmic maps
+A **choropleth map** is a map in which **areas** are shaded by **color** to represent values.
+
+.float-right[![choropleth map](images/choropleth_example.jpg)]
+
+(add a few brief guidelines of when to use)
 
 ---
 
-Dot density maps
+background-image: url(images/prop_symbol.jpg)
+class: center, middle, white
+
+# Proportional Symbols
+
+---
+
+On a **proportional symbol map**, symbols (such a circles) are scaled in proportion to the data they represent. Symbols might represent point data, but it is also common for proportional symbols to be used for area features.
+
+---
+class: center, middle, white
+background-image: url(images/boston_dots_vote.jpg)
+
+# Dot density
+
+---
+
+**Dot density maps** use points to represent counts of a geographic phenomenon. 
+
+---
+class: center, middle, white
+
+# Contour maps
 
 ---
 
@@ -394,7 +469,7 @@ Colors, sizes
 
 Choose styles layer-wide, or based on attributes
 
-http://qgis.spatialthoughts.com/2012/02/tutorial-styling-vector-data-in-qgis.html
+http://www.qgistutorials.com/en/docs/basic_vector_styling.html
 
 ---
 

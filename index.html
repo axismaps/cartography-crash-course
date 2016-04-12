@@ -133,11 +133,19 @@ class: center, middle, white
 
 ---
 
-A **choropleth map** is a map in which **areas** are shaded by **color** to represent values.
+A **choropleth map** is a map in which **areas** are shaded by **color** to represent values. Choropleth maps are perhaps the most common and familiar type of thematic map, frequently seen for demographic or political data.
 
 .float-right[![choropleth map](images/choropleth_example.jpg)]
 
-(add a few brief guidelines of when to use)
+- Good for data (ideally _abrupt_) aggregated to areal units such as states.
+
+- Colors might be classed into discrete bins of data value ranges (more on that soon!) or unclassed and continuous.
+
+- Rule #1: choropleth maps should not be used with projections that badly distort area.
+
+- Rule #2: data values should be normalized, not simple counts. For example, _population per square mile_ is appropriate, while just _population_ is not.
+
+More guidelines for choropleth maps: http://www.axismaps.com/guide/choropleth/
 
 ---
 
@@ -149,6 +157,18 @@ class: center, middle, white
 ---
 
 On a **proportional symbol map**, symbols (such a circles) are scaled in proportion to the data they represent. Symbols might represent point data, but it is also common for proportional symbols to be used for area features.
+
+.float-right[![proportional symbol map](images/prop_example.jpg)]
+
+- These can be a good way around limitations of choropleth maps: they do not require an equal-area projection, and they do not require normalized data.
+
+- Instead of sizes being directly proportional to value, sometimes symbols are **range-graded** (or **graduated**) in which case data values are binned into several discrete symbol sizes.
+
+- Symbols should be correctly scaled by _area_, not radius. For example, if a circle is to be twice as big as another circle, its radius should be √2 larger as the other circle's, not twice as large. (Sometimes an additional perceptual scaling factor is applied to compensate for human weakness in estimating sizes.)
+
+- Choose symbol size and map size carefully, or else proportional symbols can easily overwhelm a map.
+
+More guidelines on proportional symbols: http://www.axismaps.com/guide/proportional_symbols/
 
 ---
 class: center, middle, white
@@ -162,8 +182,15 @@ background-image: url(images/boston_dots_vote.jpg)
 
 ---
 class: center, middle, white
+background-image: url(images/contour.jpg)
 
-# Contour maps
+# Contours
+
+---
+
+**Contour** or **isarithmic** maps interpolate values between points
+
+- you may be less likely to make one of these, but they're seen commonly enough
 
 ---
 
@@ -175,7 +202,13 @@ class: center, middle, white
 
 ---
 
-# Map medium etc.
+class: center, middle
+
+# Map design
+
+---
+
+## Map medium etc.
 
 Static map: an image, either in print or on the web
 
@@ -185,7 +218,7 @@ Interactive map: usually web-based, on a computer, phone, etc.
 
 ---
 
-# When to map
+## When to map
 
 Just because data *can* be mapped doesn't mean it *should* be mapped. Think about whether geography is important to your story. If not, consider other ways to visualize it, or simply provide a table.
 
@@ -193,43 +226,41 @@ http://www.ericson.net/content/2011/10/when-maps-shouldnt-be-maps/
 
 ---
 
-# Map design
-
-(don't dwell *too* long on any of the following, but they're worth talking about)
+## Visual variables
 
 ---
 
-Visual variables
+## Color
 
 ---
 
-Color
-
----
-
-Data classification
+## Data classification
 
 http://uxblog.idvsolutions.com/2011/10/telling-truth.html
 
 ---
 
-Scale and Generalization
+## Scale and Generalization
 
 ---
 
-Projection http://mjfoster83.github.io/projections/index.html#/
+## Projection
+
+http://mjfoster83.github.io/projections/index.html#/
 
 ---
 
-Text
+## Text
 
 ---
+
+## Recap
 
 ...Getting this stuff right requires learning and experience. Look to the literature and to good examples.
 
 ---
 
-# Recommended reading
+## Recommended reading
 
 http://www.axismaps.com/guide/
 
@@ -237,7 +268,10 @@ Making Maps, Krygier and Wood
 
 (more links and books)
 
+Seriously, get a textbook. There's no substitute for their thoroughness at the moment.
+
 ---
+class: middle, center
 
 # Geographic data
 
@@ -247,7 +281,7 @@ Here we'll focus on some common types and sources of geographic data. Fair warni
 
 ---
 
-# Basics of geographic data
+## Basics of geographic data
 
 Vector: shapes defined by geometry. Points, lines, and areas.
 
@@ -255,7 +289,7 @@ Raster: image data, defined by pixels, for example satellite imagery
 
 ---
 
-# Basics of geographic data
+## Basics of geographic data
 
 Most geographic data has two components:
 
@@ -265,6 +299,8 @@ Most geographic data has two components:
 ---
 
 # Data formats
+
+---
 
 Tabular, e.g. a CSV table of points
 
@@ -278,13 +314,13 @@ https://4326.us/maptime-data-formats/#/
 
 ---
 
-# Let’s look at some data files
+## Let’s look at some data files
 
 (show some data)
 
 ---
 
-# Geocoding
+## Geocoding
 
 With point data, if you're lucky it will have latitude and longitude information. Sometimes you only have addresses, though. Turning those addresses into lat/lon points requires a process called geocoding. (find some links to good geocoding services here)
 
@@ -294,7 +330,7 @@ With point data, if you're lucky it will have latitude and longitude information
 
 ---
 
-# OpenStreetMap
+## OpenStreetMap
 
 Open, free, editable map of the world. The standard street map data source in the open source world.
 
@@ -306,7 +342,7 @@ http://maptimeboston.github.io/osm-101/#0
 
 ---
 
-# Natural Earth
+## Natural Earth
 
 Free basemap cartographic reference data
 
@@ -316,7 +352,7 @@ http://www.naturalearthdata.com/
 
 ---
 
-# Government data
+## Government data
 
 Census
 
@@ -328,13 +364,13 @@ Look for state and local GIS sites
 
 ---
 
-# Let’s get some data!
+## Let’s get some data!
 
 (Grab some NE base data, OSM roads, and something thematic)
 
 ---
 
-# Working with data
+## Working with data
 
 ---
 
@@ -350,7 +386,7 @@ Spatial operations (geoprocessing)
 
 ---
 
-# Tools for working with data
+## Tools for working with data
 
 Spreadsheets
 
@@ -364,7 +400,7 @@ GIS (we’ll get to this in a moment)
 
 ---
 
-# Converting between data formats
+## Converting between data formats
 
 Often needs to happen when preparing data for a web map.
 

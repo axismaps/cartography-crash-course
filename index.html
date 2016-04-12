@@ -343,32 +343,31 @@ Here we'll focus on some common types and sources of geographic data. Fair warni
 
 ## Basics of geographic data
 
-Vector: shapes defined by geometry. Points, lines, and areas.
+Most geographic data is one of two types:
 
-Raster: image data, defined by pixels, for example satellite imagery
+- **Vector:** shapes (or _features_) defined by geometry. Points, lines, and areas.
+- **Raster:** image data, defined by pixels, for example an elevation surface
+
+(vector vs raster image would be good here)
+
+And comprises two components
+
+- **Location:** e.g., latitude and longitude, and/or vector geometry
+- **Attributes:** information or numerical data about the feature
 
 ---
-
-## Basics of geographic data
-
-Most geographic data has two components:
-
-1. Location (e.g., latitude and longitude, geometry)
-2. Attributes (information or numerical data about the feature)
-
----
+class: center, middle
 
 # Data formats
 
 ---
 
-Tabular, e.g. a CSV table of points
+Geographic data come in a lot of flavors. Some common formats include:
 
-Shapefile: the longtime standard, actually a collection of files. Clunky but still prevalent.
-
-GeoJSON: common for web maps. Easily consumed by javascript code.
-
-Databases: e.g., PostGIS
+- Tabular, e.g. a CSV table of points
+- Shapefile: the longtime standard, actually a collection of files. Clunky but still prevalent.
+- GeoJSON: common for web maps. Easily consumed by javascript code.
+- Databases: e.g., PostGIS
 
 https://4326.us/maptime-data-formats/#/
 
@@ -376,7 +375,23 @@ https://4326.us/maptime-data-formats/#/
 
 ## Let’s look at some data files
 
-(show some data)
+.bigger[[Shapefile](data/shp-example)]
+
+![shapefile example](images/shp-example.jpg)
+
+---
+
+## Let’s look at some data files
+
+.bigger[[GeoJSON](data/geojson-example.json)]
+
+![geojson example](images/geojson-example.jpg)
+
+---
+
+## Let’s look at some data files
+
+.bigger[[CSV](data/csv-example.txt)]
 
 ---
 

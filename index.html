@@ -3,14 +3,15 @@
   <head>
     <title>Cartography Crash Course</title>
     <meta charset="utf-8">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic|Open+Serif:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic|Merriweather:300,700,300italic' rel='stylesheet' type='text/css'>
     <style>
 
-      body { font-family: 'Open Serif'; }
+      body { font-family: 'Merriweather'; font-weight: 300;}
       h1, h2, h3 {
         font-family: 'Open Sans';
         font-weight: bold;
         text-transform: uppercase;
+        color: black;
       }
       h2 {
         margin: 15px 0;
@@ -20,7 +21,7 @@
         max-width: 100%;
         max-height: 100%;
       }
-      .remark-slide-content{ background-size: cover !important; }
+      .remark-slide-content{ color: #333; font-size: 18px; background-size: cover !important; padding: 20px 80px;}
       .remark-slide-content h1 {
           font-size: 72px;
       }
@@ -32,9 +33,19 @@
         float: right;
         clear: both;
       }
-      .caption {
+      .caption, .citation {
         font: normal 14px/16px 'Open Sans';
         color: #999;
+      }
+      .bigger {
+        font-size: 30px;
+      }
+      .remark-slide-number {
+        font-size: 16px;
+      }
+      strong {
+        color: black;
+        font-weight: bold;
       }
     </style>
   </head>
@@ -43,34 +54,64 @@
 
 class: center, middle
 
-# Intro
+# Cartography crash course
+
+Andy Woodruff and Mike Foster  
+OpenVis 2016 Workshop
+
+(url)
 
 ---
+class: middle
 
-# Overview
+## Hello
+
+**Andy Woodruff**  
+development lead at Axis Maps, board member of the North American Cartographic Information Society (NACIS), (something about blogs or whatever)  
+[@awoodruff](http://twitter.com/awoodruff) | [andywoodruff.com](http://andywoodruff.com)
+
+**Mike Foster**:  
+TK  
+[@mjfoster83](http://twitter.com/mjfoster83) | [mjfoster.net](http://www.mjfoster.net/)
+
+We are also two of the three organizers for [Maptime Boston](http://maptimeboston.github.io)!
+
+---
+class: middle
+
+## Overview
 
 This is a cartographic crash course. Mastery of mapping takes a lot of learning—and a lot more than a few hours!
 
 Today's goal is to provide a hands-on introduction to some common mapping concepts, data, and technologies, and to provide resources for further learning.
 
----
+Many of these slides contain information that we won't spend much time on today. We're going to introduce some topics only briefly, leaving the slides as future reference.
 
-# At a glance
+---
+class: bigger, middle
+
+## At a glance
 
 1. Core cartography concepts
+
 2. Geographic data
+
 4. Static (print) map workflows
+
 4. Interactive (web) map workflows
 
 ---
+class: center, middle
 
 # What is a map?
 
-Sounds like a silly question, but it's important to recognize the **what** and **why** of maps.
+Sounds like a silly question, but it's important to understand  
+the **what** and **why** of maps.
 
 ---
+class: bigger
 
-# Textbook definition
+## Textbook definition
 
 (okay, wtf, none of my actual textbooks seem to give a definition)
 
@@ -80,14 +121,13 @@ It is some human's interpretation of the place. It reflects choices and biases o
 It does not and cannot represent **everything** in the place. Things must be omitted, simplified, etc. for the map to make any sense.
 
 ---
+class: bigger
 
 ## Types of maps
 
-**Reference maps:** emphasize the **location** of spatial phenomena, e.g. topographic maps or road maps.
+**Reference maps** emphasize the **location** of spatial phenomena, e.g. topographic maps or road maps.
 
-**Thematic maps:** emphasize the **spatial pattern** of geographic attributes, e.g. population density or income.
-
-(Slocum et al.)
+**Thematic maps** emphasize the **spatial pattern** of geographic attributes, e.g. population density or income.
 
 When making a thematic map in particular, it's important the understand the nature of the geographic phenomena being mapped.
 

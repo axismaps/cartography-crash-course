@@ -47,6 +47,9 @@
         color: black;
         font-weight: bold;
       }
+      li {
+        margin: 10px 0;
+      }
     </style>
   </head>
   <body>
@@ -113,12 +116,12 @@ class: bigger
 
 ## Textbook definition
 
-(okay, wtf, none of my actual textbooks seem to give a definition)
+.caption[(okay, wtf, none of my actual textbooks seem to give a definition)]
 
 A map is a *representation* of a place.
 
 It is some human's interpretation of the place. It reflects choices and biases of the mapmaker.
-It does not and cannot represent **everything** in the place. Things must be omitted, simplified, etc. for the map to make any sense.
+It does not and cannot represent _everything_ in the place. Things must be omitted, simplified, etc. for the map to make any sense.
 
 ---
 class: bigger
@@ -291,6 +294,15 @@ The list has been further expanded by other researches since.
 ---
 
 ## Color
+
+Color is one of the more challenging design elements to perfect. It takes experience and a designer's eye to produce pleasing and effective color schemes, but there are also some guidlines to follow.
+
+- Bear in mind certain cartographic conventions, such as blue for water and green for natural areas.
+- Avoid red-green color schemes, as a significant population is colorblind and won't perceive these well.
+- Keep an eye on how your color choices affect **figure-ground**, the appearance of things being in the foreground or background.
+- .float-right[![color schemes](images/colorschemes.jpg)] For choropleth maps, use color ramps appropriate to the data. Is it **sequential** (ordered from low to high, e.g. population density), **diverging** (values above or below some break point, e.g. population change), or **qualitative** (having no natural order, e.g. race/ethnicity)?
+
+More on color: http://www.axismaps.com/guide/color_schemes/, http://colorbrewer.org (click the "i" icons in each section)
 
 ---
 

@@ -432,6 +432,8 @@ Open, free, editable map of the world. The standard street map data source in th
 
 (data download links)
 
+https://mapzen.com/data/metro-extracts/
+
 note: use of OSM data requires attribution!
 
 http://maptimeboston.github.io/osm-101/#0
@@ -456,7 +458,11 @@ Look for state and local GIS sites
 
 ---
 
-google search tips when looking for specific data?
+If all else fails, just try Google!
+
+"_[thing]_ shapefile"  
+"_[thing]_ geojson"  
+"_[thing]_ gis files"  
 
 (additional data source links)
 
@@ -550,8 +556,14 @@ We only have time for a brief look at a few of the features of QGIS. For a more 
 ---
 
 (just demo things in the following sections; make slides for future reference)
-TBD: what data to use &amp; what map to make!
-Ideally combine different data sources and/or types
+
+---
+
+Map data sources:
+
+Mapzen metro extract of Boston: https://mapzen.com/data/metro-extracts/  
+Boston neighborhoods (as a demo, search google for "boston neighborhoods shapefile") https://data.cityofboston.gov/City-Services/Boston-Neighborhood-Shapefiles/af56-j7tb  
+311 Requests (we'll pull a #ratmap from this): https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52
 
 ---
 
@@ -561,49 +573,49 @@ There's a lot going on in QGIS. But most of the time, for basic mapping, you'll 
 
 ---
 
-# Layers
+## Layers
 
-Most maps in GIS are organized in terms of **layers**. Each layer represents a geographic data set (e.g., country outlines or city points), or some kind of annotation.
+Most maps in GIS are organized in terms of **layers**. Each layer represents a geographic data set (e.g., country outlines or city points), or some kind of annotation. Generally, they are shown in a list stacked in the same order as they are drawn on the map (i.e., bottom layer on the bottom, top layer on the top).
 
-[image of layers]
-
----
-
-# Importing data
-
-For many formats, just open it
-
-CSV joins
+![GIS layers](images/layers.jpg)
 
 ---
 
-# Map properties
+## Importing data
 
-Projection
+Typical geographic data formats can be opened directly in QGIS, through the "Add Layer" menu or toolbar, or simply by dragging and dropping. QGIS [supports lots of data formats!](https://docs.qgis.org/2.2/en/docs/user_manual/working_with_vector/supported_data.html)
 
-Background color
+![add layer](images/addlayer.jpg)
 
----
-
-# Attributes
-
-Attribute table
-
-Field calculator
-
-Identify tool
-
-Selecting by attributes
+Another common way to get data into a map is with a **table join**. In this case, you have a table of data belonging to geographic entities (e.g., states) but not the geographic shapes themselves. QGIS can join the table to a separate geodata file, as long as they both have some key field that matches. [Learn more about table joins here.](http://www.qgistutorials.com/en/docs/performing_table_joins.html)
 
 ---
 
-# Symbolizing data
+## Map properties
 
-Colors, sizes
+There are two types of project properties (_Project_ menu, _Project Properties..._) you're likely to deal with: **general properties** such as background color and units of measurements, and **CRS**.
 
-Choose styles layer-wide, or based on attributes
+CRS stands for _coordinate reference system_, and for practical purposes this is your map projection. Choose projections wisely! (need link)
 
-http://www.qgistutorials.com/en/docs/basic_vector_styling.html
+![crs](images/crs.png)
+
+---
+
+## Attributes
+
+Attributes are what drive a thematic map, and lot of time working in GIS is spent dealing with attributes in one way or another, be it [viewing the attribute table, selecting features based on attribute values](http://www.qgistutorials.com/en/docs/working_with_attributes.html), [identifying features on the map](http://docs.qgis.org/2.0/en/docs/user_manual/introduction/general_tools.html#identify), [calculating new attributes](https://docs.qgis.org/2.2/en/docs/user_manual/working_with_vector/field_calculator.html), or symbolizing features by attribute (up next).
+
+![attributes](images/attributes.jpg)
+
+---
+
+## Symbolizing data
+
+Data symbolization may be the biggest task of mapping in GIS. This is where you set styles, not only for representing attribute values but also for creating the look of your map. Styles can be applied layer-wide, or they can be set according to attribute values, with variable colors, widths, sizes, etc.
+
+![style example](images/symbolize.png)
+
+Styling vector layers is a big topic! [Start here](http://www.qgistutorials.com/en/docs/basic_vector_styling.html) for learning it in QGIS.
 
 ---
 

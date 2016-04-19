@@ -142,33 +142,6 @@ When making a thematic map in particular, it's important to understand the natur
 
 ---
 
-## Geographic phenomena
-
-**Discrete phenomena** occur at distinct locations, e.g. indivudal people.  
-**Continuous phenomena** occur all over a region, e.g. elevation.
-
-**Abrupt phenomena** change suddenly, e.g. electoral votes per state.  
-**Continuous phenomena** change gradually, e.g. temperature
-
-![](images/abrupt_discrete.jpg)  
-.caption[Alan MacEachren]
-
----
-
-## Levels of measurement
-
-Data produced from geographic phenomena may be **qualitative** (no numerical values) or **quantitative** (numerical values), or more specifically, one of four **levels of measurement**.
-
-**Nominal:** categorical and non-ordered, e.g. official languages
-
-**Ordinal:** ordered, but non-numerical, e.g. "Low", "Medium", and "High"
-
-**Interval:** ordered, with understood numerical differences, but an arbitrary zero point, e.g. Farhenheit or Celsius temperature scales
-
-**Ratio:** full-on numerical, with a non-arbitrary zero, e.g. population. (Ratio is the most common numerical data type.)
-
----
-
 class: middle, center
 
 # Common types of thematic maps
@@ -345,13 +318,64 @@ Cartography is all about abstraction. It is not possible to show every detail, e
 
 ## Projection
 
+This is a big topic. Read this:
+
 http://mjfoster83.github.io/projections/index.html#/
+
+Mike to do, a few things to keep in mind.
 
 ---
 
 ## Text
 
+Two types
+- labels
+- prose
+
+Let the graphic speak where it can
+
+Considerations
+- Audience
+- Space
+- Scale
+
+Hierarchy
+
+Font
+- consistent fonts
+- choose two, one serif one sans
+
+Link
+
 ---
+
+## Geographic phenomena
+
+**Discrete phenomena** occur at distinct locations, e.g. indivudal people.  
+**Continuous phenomena** occur all over a region, e.g. elevation.
+
+**Abrupt phenomena** change suddenly, e.g. electoral votes per state.  
+**Continuous phenomena** change gradually, e.g. temperature
+
+![](images/abrupt_discrete.jpg)  
+.caption[Alan MacEachren]
+
+---
+
+## Levels of measurement
+
+Data produced from geographic phenomena may be **qualitative** (no numerical values) or **quantitative** (numerical values), or more specifically, one of four **levels of measurement**.
+
+**Nominal:** categorical and non-ordered, e.g. official languages
+
+**Ordinal:** ordered, but non-numerical, e.g. "Low", "Medium", and "High"
+
+**Interval:** ordered, with understood numerical differences, but an arbitrary zero point, e.g. Farhenheit or Celsius temperature scales
+
+**Ratio:** full-on numerical, with a non-arbitrary zero, e.g. population. (Ratio is the most common numerical data type.)
+
+---
+
 
 ## Recap
 
@@ -364,6 +388,10 @@ http://mjfoster83.github.io/projections/index.html#/
 http://www.axismaps.com/guide/
 
 Making Maps, Krygier and Wood
+
+Slocum
+
+Online links...
 
 (more links and books)
 
@@ -403,10 +431,21 @@ class: center, middle
 
 Geographic data come in a lot of flavors. Some common formats include:
 
+**Vector**
+*data in points, lines, and polygons*
+
 - Tabular, e.g. a CSV table of points
 - Shapefile: the longtime standard, actually a collection of files. Clunky but still prevalent.
 - GeoJSON: common for web maps. Easily consumed by javascript code.
+- KML/KMZ: the google earth format
+- GeoPDF: georeference PDF
 - Databases: e.g., PostGIS
+
+**Raster**
+*data held in pixels*
+
+- GeoTIFF
+- DEM (Digital Elevation Model)
 
 https://4326.us/maptime-data-formats/#/
 
@@ -615,11 +654,18 @@ Another common way to get data into a map is with a **table join**. In this case
 
 ---
 
-## Map properties
+## Visualizing Data
 
-There are two types of project properties (_Project_ menu, _Project Properties..._) you're likely to deal with: **general properties** such as background color and units of measurements, and **CRS**.
+See your stuff.  
+Make sure your file works.
 
-CRS stands for _coordinate reference system_, and for practical purposes this is your map projection. Choose projections wisely! (need link)
+---
+
+## Projection
+
+Projection is important! There are two types of project properties (_Project_ menu, _Project Properties..._) you're likely to deal with: **general properties** such as background color and units of measurements, and **CRS**.
+
+CRS stands for _coordinate reference system_, and for practical purposes this is your map projection. Choose the projection to best fit your map extent! (need link)
 
 ![crs](images/crs.png)
 
@@ -688,8 +734,9 @@ http://giscommons.org/introduction-concepts/ or similar
 
 List some other ways to make static maps
 
+ArcGIS?  
 R?  
-MAPublisher?  
+Adobe Illustrator/MAPublisher?  
 web tools like mapbox
 
 ---

@@ -6,9 +6,8 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic|Merriweather:300,700,300italic' rel='stylesheet' type='text/css'>
     <style>
 
-      body { font-family: 'Merriweather'; font-weight: 300;}
+      body { font-family: 'Open Sans'; font-weight: 300;}
       h1, h2, h3 {
-        font-family: 'Open Sans';
         font-weight: bold;
         text-transform: uppercase;
         color: black;
@@ -50,6 +49,13 @@
       li {
         margin: 10px 0;
       }
+      a {
+        color: #F16F6F;
+        text-decoration: underline;
+      }
+      a:hover{
+        color: black;
+      }
     </style>
   </head>
   <body>
@@ -70,7 +76,7 @@ class: middle
 ## Hello
 
 **Andy Woodruff**  
-development lead at Axis Maps, board member of the North American Cartographic Information Society (NACIS), (something about blogs or whatever)  
+development lead at Axis Maps, board of directors of the North American Cartographic Information Society (NACIS), (something about blogs or whatever)  
 [@awoodruff](http://twitter.com/awoodruff) | [andywoodruff.com](http://andywoodruff.com)
 
 **Mike Foster**:  
@@ -320,6 +326,20 @@ Most choropleth maps (and some other types) divide data into a handful of bins (
 ---
 
 ## Scale and Generalization
+
+Cartography is all about abstraction. It is not possible to show every detail, especially at small scale ("small scale" = zoomed out, "large scale" = zoomed in). Thus a map requires [generalization](http://www.gitta.info/Generalisati/en/html/index.html). Common generalization tasks include:
+
+- Selection: choosing which objects to include on the map
+- Simplification: reduce the number of vertices in an object
+- Smoothing: reduce sharp angles to smoother curves
+- Aggregation: group points into areas
+- Amalgamation: group areas into larger areas
+- Collapse: reduce a detailed object to a point symbol
+- Merge: grouping of line features
+- Refinement: select only portins of an object to display
+- Exaggeration: amplify a part of an object (for clarity)
+- Enhancement: add detail that visually elevates an object
+- Displacement: separate objects (for clarity)
 
 ---
 
@@ -667,6 +687,10 @@ http://giscommons.org/introduction-concepts/ or similar
 # Also
 
 List some other ways to make static maps
+
+R?  
+MAPublisher?  
+web tools like mapbox
 
 ---
 

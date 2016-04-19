@@ -15,7 +15,7 @@
       h2 {
         margin: 15px 0;
       }
-      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .remark-code, .remark-inline-code { font-family: monospace; font-size: 12px;}
       img {
         max-width: 100%;
         max-height: 100%;
@@ -138,7 +138,7 @@ class: bigger
 
 **Thematic maps** emphasize the **spatial pattern** of geographic attributes, e.g. population density or income.
 
-When making a thematic map in particular, it's important the understand the nature of the geographic phenomena being mapped.
+When making a thematic map in particular, it's important to understand the nature of the geographic phenomena being mapped.
 
 ---
 
@@ -214,7 +214,7 @@ On a **proportional symbol map**, symbols (such a circles) are scaled in proport
 
 - Instead of sizes being directly proportional to value, sometimes symbols are **range-graded** (or **graduated**) in which case data values are binned into several discrete symbol sizes.
 
-- Symbols should be correctly scaled by _area_, not radius. For example, if a circle is to be twice as big as another circle, its radius should be √2 larger as the other circle's, not twice as large. (Sometimes an additional perceptual scaling factor is applied to compensate for human weakness in estimating sizes.)
+- Symbols should be correctly scaled by _area_, not radius. For example, if a circle is to be twice as big as another circle, its radius should be √2 larger than the other circle's, not twice as large. (Sometimes an additional perceptual scaling factor is applied to compensate for human weakness in estimating sizes.)
 
 - Choose symbol size and map size carefully, or else proportional symbols can easily overwhelm a map.
 
@@ -699,7 +699,7 @@ web tools like mapbox
 
 ---
 
-# What is a web map?
+## What is a web map?
 
 We don’t mean simply a map on the web (which could include static images), but maps more powered by the web: interactive, code-driven, live data, animated, etc. etc.
 It could be a reference map like Google, or a data-driven map (NYT etc.), or anything in between
@@ -708,13 +708,13 @@ https://github.com/maptimeBoston/web-maps-101
 
 ---
 
-# When should a map be interactive?
+## When should a map be interactive?
 
 The web makes it tempting to go bananas and throw everything into a map, with all kinds of interaction and data and everything. Design carefully for your purpose. The map still needs to look good, and have a good user experience. Especially bear this in mind if your users are only going to spend 15 seconds looking at the thing.
 
 ---
 
-# Web map design considerations
+## Web map design considerations
 
 Most of the static map rules apply
 
@@ -726,32 +726,38 @@ mobile!
 
 ---
 
-# Web map technology
+## Web map technology
 
 Web mapping is a quickly evolving arena, technically. Your options will seem more diverse than the static GIS world, and often come with a steeper learning curve. But several companies do focus on products and services aimed at lowering the barrier of entry.
 
 ---
 
-# Web mapping products/services
+## Web mapping products/services
 
-(list some, Mapbox etc.)
+Mapbox
+
+CartoDB
+
+ArcGIS online
+
+etc.
 
 ---
 
-# Building your own web map
+## Building your own web map
 
 Those companies are happy to show you how to use their products. Today we’re going to show a more DIY approach in order to introduce some of the fundamental technology of web maps.
 
 ---
 
-# Web map architecture
+## Web map architecture
 
 Most web maps will have at least two things: data and code. Sometimes that’s it, e.g. many NYT interactives.
 Often, a third component: a basemap (define basemap here). Sometimes that basemap IS the only data, and sometimes there is data on top of it.
 
 ---
 
-# Slippy map
+## Slippy map
 
 A map that can be panned and zoomed (like Google Maps) is sometimes called a “slippy map” in the lingo. Most slippy maps are:
 
@@ -763,9 +769,9 @@ See Anatomy of a Web Map etc.
 
 ---
 
-# Building a custom slippy map
+## Building a custom slippy map
 
-Leaflet is the most popular open-source javascript library. It is lightweight and easy to use, supporting basic map interactions, tiled map layers, and vector data layers (such as geojson data). It’s a good place to start a journey of custom web mapping.
+[Leaflet](http://leafletjs.com) is the most popular open-source javascript library. It is lightweight and easy to use, supporting basic map interactions, tiled map layers, and vector data layers (such as geojson data). It’s a good place to start a journey of custom web mapping.
 
 (Demo a simple Leaflet map)
 
@@ -784,14 +790,16 @@ Fortunately, there are tons of resources and an amazing open mapping community t
 
 ---
 
-# Beginning at the end
+## Beginning at the end
 
-Just want to show how simple a basic web map looks from a technical standpoint. It’s not intimidating.
-(Show end product of whatever we’re making here, and the code which won’t be too long)
+Click to take a look at this [example of a simple web map](http://bl.ocks.org/awoodruff/2488ee1fdf0cf063904e). Notice how little code there is! It doesn't take much to get started with web maps, so don't be intimidated.
+
+[![web map example](images/leaflet_example.jpg)](http://bl.ocks.org/awoodruff/2488ee1fdf0cf063904e)
 
 ---
+class: bigger
 
-# Anatomy of *this* web map:
+## Anatomy of *this* web map:
 
 - Our data
 - A basemap
@@ -799,37 +807,72 @@ Just want to show how simple a basic web map looks from a technical standpoint. 
 
 ---
 
-# Basic setup
+## Basic setup
 
-Html page
+The skeleton of a Leaflet web map is an HTML page, some extenral scripts, and some code of our own.
 
-Import leaflet libraries
+```html
+<html>
+<head>
+  <title>A Leaflet map!</title>
+  <!-- load some Leaflet scripts -->
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <style>
+    #map{ width: 900px; height: 500px; }
+  </style>
+</head>
+<body>
 
+  <!-- the map will appear in this element -->
+  <div id="map"></div>
+
+  <script>
+
+  // JavaScript code to initialize the map
+
+  </script>
+</body>
+</html>
+```
 ---
 
-# We need a basemap!
+## We need a basemap!
 
 Unlike a static map, where the extent of your base data is limited, on a web map it usually covers many scales and often vast areas. This means a LOT of data and design decisions. (For example see how you get more detail as you zoom into Google, and the designs change.) Therefore a making a basemap on your own can be a huge task. We’ll point out some resources and services for doing just that, but very often you’ll be using a pre-made (whether by you or by someone else) basemap.
 
----
+There are [many, many basemaps](https://leaflet-extras.github.io/leaflet-providers/preview/) out there that you can use. The best bet is to go with one that's free to use and derived from OpenStreetMap data. You can't legally just grab basemaps from places like Google Maps!
 
-# Choosing a basemap
-
-Show some sources. Leaflet providers demo thing.
-
-You can’t (legally) just pull in Google’s map, etc. Go with OSM-based maps.
+![](images/tiles.jpg)
 
 ---
 
-# Loading basemap into Leaflet
+## Loading a basemap in Leaflet
 
-Boom, just like that we have a map.
+Tiled basemaps have a URL template for each tile's zoom level and x/y coordinate. It typically looks like this:
 
-Set initial location, zoom, etc.
+`http://tiles.mapc.org/basemap/{z}/{x}/{y}.png`
+
+Using that, setting up a simple slippy map is a breeze! Just initialize the map and plug in that tile URL.
+
+```
+// initialize the map
+var map = L.map('map').setView([42.35, -71.08], 13);
+
+// load a tile layer
+L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
+{
+  attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
+  maxZoom: 17,
+  minZoom: 9
+}).addTo(map);
+```
+
+Example: [basic Leaflet map with tiled basemap](http://bl.ocks.org/awoodruff/e9739a6719e0604eef58)
 
 ---
 
-# Data
+## Data
 
 Cool, now we want our own data.
 
@@ -837,7 +880,7 @@ Whatever it is, start with a shapefile or something so we can show conversion to
 
 ---
 
-# Loading data to leaflet
+## Loading data to leaflet
 
 L.geojson
 
@@ -845,14 +888,14 @@ Open web inspector maybe? Show the html/svg structure of the map
 
 ---
 
-# Customizing &amp; getting more advanced
+## Customizing &amp; getting more advanced
 
 Styling (do a choropleth or proportional symbol or something)
 Interaction (hovers, popups)
 
 ---
 
-# And beyond…
+## And beyond…
 
 With more coding, you can do awesome things.
 
@@ -860,7 +903,7 @@ With more coding, you can do awesome things.
 
 ---
 
-# Additional options for web maps
+## Additional options for web maps
 
 D3
 
@@ -872,23 +915,23 @@ Esri?
 
 ---
 
-# More web map resources
+## More web map resources
 
 (links)
 
 ---
 
-# (Web mapping summary)
+## (Web mapping summary)
 
 ---
 
-# Summary of everything!
+## Summary of everything!
 
 If possible to distill like 10 tips/thoughts/suggestions/tools/resources, that would be cool
 
 ---
 
-# Learning more
+## Learning more
 
 Maptime!
 
@@ -898,13 +941,13 @@ Remember to plug NACIS! And bring #stickers etc.
 
 ---
 
-# links, links, links
+## links, links, links
 
 List like a billion resource links here, including things mentioned in previous slides
 
 ---
 
-# links
+## links
 
 http://tolomaps.com/resources/
 

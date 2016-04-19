@@ -539,19 +539,15 @@ A lot of tools, sets of tools, or operations can fall under this umbrella; howev
 
 # GIS
 
-ArcGIS by Esri has long reigned supreme as *the* GIS software. It’s powerful, and everywhere… but also expensive.
+[ArcGIS](http://desktop.arcgis.com/en/) by Esri has long reigned supreme as *the* GIS software. It’s powerful, and everywhere… but also expensive.
 
----
-
-# GIS
-
-QGIS is the open-source GIS software of choice. It’s growing more awesome every day and has an excellent community of users. This is what we’ll use to make a map today.
+[QGIS](http://www.qgis.org/en/site/) is the open-source GIS software of choice. It’s growing more awesome every day and has an excellent community of users. This is what we’ll use to make a map today.
 
 ---
 
 # Let’s do it!
 
-We only have time for a brief look at a few of the features of QGIS. For a more in-depth guide, Mike’s tutorial http://maptimeboston.github.io/qgis-101/#0 (plus other resources)
+We only have time for a brief look at a few of the features of QGIS. Today's purpose is to expose you to some of the core capabilities of QGIS, and to show you what GIS can do in general. Don't worry if you can't follow everything! A list of more in-depth resources and tutorials will follow.
 
 ---
 
@@ -559,11 +555,19 @@ We only have time for a brief look at a few of the features of QGIS. For a more 
 
 ---
 
-Map data sources:
+# Data for our map
 
-Mapzen metro extract of Boston: https://mapzen.com/data/metro-extracts/  
-Boston neighborhoods (as a demo, search google for "boston neighborhoods shapefile") https://data.cityofboston.gov/City-Services/Boston-Neighborhood-Shapefiles/af56-j7tb  
-311 Requests (we'll pull a #ratmap from this): https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52
+We're going to make a #ratmap! It will use data from the following places:
+
+[Mapzen OSM metro extract of Boston](https://mapzen.com/data/metro-extracts/)
+
+[Boston neighborhoods](https://data.cityofboston.gov/City-Services/Boston-Neighborhood-Shapefiles/af56-j7tb)  
+
+[Boston open 311 requests](https://data.cityofboston.gov/City-Services/311-Service-Requests/awu8-dc52)
+
+Or, you can download all data for this map at [link]
+
+A QGIS project file for the final map is available at [link]
 
 ---
 
@@ -619,25 +623,29 @@ Styling vector layers is a big topic! [Start here](http://www.qgistutorials.com/
 
 ---
 
-# Editing data
+## Editing data
 
-Geometry, attributes
+QGIS offers powerful [editing tools](https://docs.qgis.org/2.2/en/docs/user_manual/working_with_vector/editing_geometry_attributes.html) for changing attributes, editing geometry, and adding or removing features. One common editing task is called _digitizing_: tracing new vector features from an exisitng source such as an image.
 
-Sadly QGIS can only edit geometry of shapefiles
-
----
-
-# Geoprocessing
-
-Advanced calculations, transformations of geometry, etc.
+![editing](images/edit.png)
 
 ---
 
-# Map layout and export
+## Geoprocessing
 
-Print composer, ugh
+Many advanced calculations and geometry operations are possible with GIS. For example, you might want to merge polygons together, or convert polygons to lines. In QGIS, look under the Vector menu, the [processing toolbox](http://docs.qgis.org/2.0/en/docs/user_manual/processing/toolbox.html), or in [plugins](http://www.qgistutorials.com/en/docs/using_plugins.html).
 
-Really nice maps can be made with QGIS alone, but most professional cartos will refine further in a graphics program, e.g. Inkscape
+![](images/vectormenu.jpg)
+
+---
+
+## Map layout and export
+
+Typically the final step in a cartographer's use of GIS is to lay out the map on a page along with elements such as titles, and export to an image or other format. In QGIS this is done with the [Print Composer](http://docs.qgis.org/2.0/en/docs/user_manual/print_composer/print_composer.html).
+
+![](images/printcomposer.jpg)
+
+Very nice maps can be made with QGIS alone, but most professional cartographers will refine further in a vector graphics program, such as Illustrator or the open-source alternative Inkscape.
 
 ---
 
@@ -648,6 +656,11 @@ Rundown of what QGIS (GIS in general) can do
 Typical steps in a map workflow
 
 Links to learning resources
+
+http://docs.qgis.org/2.8/en/docs/training_manual/index.html  
+http://www.qgistutorials.com/en/docs/making_a_map.html  
+http://duspviz.mit.edu/intro-to-qgis/#0 (or maptime, whichever is more up to date)  
+http://giscommons.org/introduction-concepts/ or similar
 
 ---
 

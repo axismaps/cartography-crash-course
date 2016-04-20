@@ -113,6 +113,11 @@ What is a web map?
 - [Anatomy of a Web Map](http://maptime.io/anatomy-of-a-web-map/), Maptime SF
 - [Intro to Web Mapping](https://github.com/maptimedet/intro-web-mapping), Maptime Detroit
 
+When should a map be interactive?
+
+- [Why We Are Doing Fewer Interactives](https://github.com/archietse/malofiej-2016/blob/master/tse-malofiej-2016-slides.pdf) by Archie Tse, New York Times
+- [Making maps, part 1: Less interactivity](http://blog.apps.chicagotribune.com/2011/03/08/making-maps-1/) by Brian Boyer
+
 Building a custom slippy map
 
 - [Leaflet Intro](http://maptimeboston.github.io/leaflet-intro/), Maptime Boston

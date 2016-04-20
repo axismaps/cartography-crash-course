@@ -763,37 +763,23 @@ The web makes it tempting to go bananas and throw everything into a map, with al
 
 ## Web map design considerations
 
-Most of the static map rules apply
+Web maps are like static maps in many ways. All the same design considerations we discussed earlier are still relevant on the web. In addition to visual design, we need to think about the design of **interaction** and **user experience**.
 
-mobile!
+- Is the user interface understandable?
+- Is interaction comfortable and apparent to users?
+- Does the map move? Animation can be confusing if not carefully designed.
+- Does the map function smoothly? Don't push technology too far if it will crash browsers and melt phones.
+- Is the map readable and usable on various media, from mobile devices to large desktop screens?
 
-...and some other stuff
-
-(list)
+There is much more to say about web map design. (need awesome resource links here)
 
 ---
 
 ## Web map technology
 
-Web mapping is a quickly evolving arena, technically. Your options will seem more diverse than the static GIS world, and often come with a steeper learning curve. But several companies do focus on products and services aimed at lowering the barrier of entry.
+Web mapping is a quickly evolving arena, technically. Your options will seem more diverse than the static GIS world, and often come with a steeper learning curve. But several companies do focus on products and services aimed at lowering the barrier of entry. Those comapnies are happy to guide you through easy web mapping with their products, and we will introduce some of them later.
 
----
-
-## Web mapping products/services
-
-Mapbox
-
-CartoDB
-
-ArcGIS online
-
-etc.
-
----
-
-## Building your own web map
-
-Those companies are happy to show you how to use their products. Today we’re going to show a more DIY approach in order to introduce some of the fundamental technology of web maps.
+First, though, let's take a look at how you can **build your own web map**! It's a good way to become familiar with some of the fundamental technology involved.
 
 ---
 
@@ -808,11 +794,12 @@ Often, a third component: a basemap (define basemap here). Sometimes that basema
 
 A map that can be panned and zoomed (like Google Maps) is sometimes called a “slippy map” in the lingo. Most slippy maps are:
 
-1. In the mercator projection
+1. In the Mercator projection
 2. Tiled (either as images or vector data)
-3. (there’s gotta be something else!)
 
-See Anatomy of a Web Map etc.
+![](images/mapquest_tiles2.png)
+
+Learn more: [Web Maps 101](http://maptimeboston.github.io/web-maps-101/#0), [Anatomy of a Web Map](http://maptime.io/anatomy-of-a-web-map/)
 
 ---
 
@@ -826,11 +813,10 @@ http://maptimeboston.github.io/leaflet-intro/
 
 ---
 
-# Let’s make a web map!
-
-(breeze over a lot of this as needed. There just isn’t time to teach every detail)
+## Let’s make a web map!
 
 This will be a simplified demo that provides a taste of a web mapping workflow. As always, it takes a lot of learning and work to really master web maps. Learning to code is of course a big part of that, if you’re not already a coder.
+
 Fortunately, there are tons of resources and an amazing open mapping community to assist you in learning this stuff. (Many links to be provided shortly)
 
 [Need some non-headache way to get people running local servers, or maybe there is some online sandbox?]
@@ -900,9 +886,9 @@ Tiled basemaps have a URL template for each tile's zoom level and x/y coordinate
 
 `http://tiles.mapc.org/basemap/{z}/{x}/{y}.png`
 
-Using that, setting up a simple slippy map is a breeze! Just initialize the map and plug in that tile URL.
+Using that, setting up a simple slippy map is a breeze! Just initialize the map and plug in that tile URL. In this example we're using a basemap from [MAPC](http://www.mapc.org/).
 
-```
+```javascript
 // initialize the map
 var map = L.map('map').setView([42.35, -71.08], 13);
 
@@ -921,30 +907,99 @@ Example: [basic Leaflet map with tiled basemap](http://bl.ocks.org/awoodruff/e97
 
 ## Data
 
-Cool, now we want our own data.
+Cool, now we want our own data on top of the basemap. We'll use the #ratmap data as GeoJSON. Leaflet can load and display GeoJSON data very easily.
 
-Whatever it is, start with a shapefile or something so we can show conversion to geojson
+Remember the steps it took to get here? It's not an uncommon workflow:
+
+1. Download CSV data from the Boston data site
+2. Load CSV in QGIS
+3. Filter data to include only Rodent Activity
+4. Save filtered data as GeoJSON
 
 ---
 
 ## Loading data to leaflet
 
-L.geojson
+We use jQuery to help load the GeoJSON file, and then only one line of code to [display it](http://bl.ocks.org/awoodruff/1dc36a658a2e24e01b12)!
 
-Open web inspector maybe? Show the html/svg structure of the map
+```html
+<html>
+<head>
+  <title>A Leaflet map!</title>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <style>
+    #map{ height: 100% }
+  </style>
+</head>
+<body>
+
+  <div id="map"></div>
+
+  <script>
+
+  // initialize the map
+  var map = L.map('map').setView([42.35, -71.08], 13);
+
+  // load a tile layer
+  L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
+    {
+      attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
+      maxZoom: 17,
+      minZoom: 9
+    }).addTo(map);
+
+  // load GeoJSON from an external file
+  $.getJSON("rodents.geojson",function(data){
+    // add GeoJSON layer to the map once the file is loaded
+    L.geoJson(data).addTo(map);
+  });
+
+  </script>
+</body>
+</html>
+```
 
 ---
 
 ## Customizing &amp; getting more advanced
 
-Styling (do a choropleth or proportional symbol or something)
-Interaction (hovers, popups)
+We can use custom icons...
+
+```javascript
+// load GeoJSON from an external file
+$.getJSON("rodents.geojson",function(data){
+  var ratIcon = L.icon({
+    iconUrl: 'http://andywoodruff.com/maptime-leaflet/rat.png',
+    iconSize: [60,50]
+  });
+  L.geoJson(data,{
+    pointToLayer: function(feature,latlng){
+      return L.marker(latlng,{icon: ratIcon});
+    }
+  }).addTo(map);
+});
+```
+
+And add popups...
+
+```javascript
+pointToLayer: function(feature,latlng){
+  var marker = L.marker(latlng,{icon: ratIcon});
+  marker.bindPopup(feature.properties.Location + '<br/>' + feature.properties.OPEN_DT);
+  return marker;
+}
+```
 
 ---
 
 ## And beyond…
 
-With more coding, you can do awesome things.
+With more coding, you can do awesome things! Perhaps a [choropleth map](http://bl.ocks.org/awoodruff/3ce5d735126a56dfff94) or [clusters](http://bl.ocks.org/awoodruff/5de3553bb1f1b0c5f90d).
+
+The beauty of something like Leaflet is that it provides a basic framework upon which you can build amazing maps with your own data, creatvity, and coding cleverness. The key to mastering web maps is not necessarily learning how to use specific libraries—that's often the easy part—but being comfortable with code in general and working with geographic data.
+
 
 (list of more leaflet and/or map-ish js resources. in-depth stuff like DUSPviz)
 
@@ -960,7 +1015,7 @@ CartoDB (good place to start for out-of-the-box maps of your data)
 
 openlayers
 
-Esri?
+Esri
 
 ---
 

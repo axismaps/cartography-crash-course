@@ -34,3 +34,16 @@ Scale and generalization
 
 - [Generalisation of Map Data](http://www.gitta.info/Generalisati/en/html/index.html), Geographic Information Technology Trainling Alliance
 - Map generalization exercise by David Woodward (link to image)
+
+What is a web map?
+
+- [Web Maps 101](https://github.com/maptimeBoston/web-maps-101), Maptime Boston
+- [Anatomy of a Web Map](http://maptime.io/anatomy-of-a-web-map/), Maptime SF
+
+Building a custom slippy map
+
+- [Leaflet Intro](http://maptimeboston.github.io/leaflet-intro/), Maptime Boston
+
+Basemaps
+
+- [Leaflet Providers Demo](https://leaflet-extras.github.io/leaflet-providers/preview/) (code and preview for various basemap tile sets)

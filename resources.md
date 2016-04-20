@@ -7,6 +7,7 @@ General mapping
 - [DUSPViz](http://duspviz.mit.edu/) by Mike Foster and others
 - [Maptime Boston tutorials and resources](http://maptimeboston.github.io/resources)
 - [MaptimeHRVA meeting links and notes](https://github.com/maptime/hrva/blob/master/meetings.md)
+- [CartoTalk](http://www.cartotalk.com/) forum hosted by NACIS
 
 Books
 
@@ -91,12 +92,14 @@ Data sources
 - [Maptime DC list of data sources](https://github.com/maptime/dc/wiki/Geodata-Sources)
 - [Data sources list](http://tolomaps.com/resources/#data) maintained by Robin Tolochko
 - [Natural Earth](http://www.naturalearthdata.com/)
+- [geojson.xyz](http://geojson.xyz/), a website and command line utility for downloading Natural Earth data
 
 OpenStreetMap
 
 - [OSM 101](http://maptimeboston.github.io/osm-101/#0) by Jake Wasserman for Maptime Boston
 - [Mapzen metro extracts](https://mapzen.com/data/metro-extracts/)
 - [Geofabrik OSM extracts](https://download.geofabrik.de/)
+- [learnOSM](http://learnosm.org/en/)
 
 QGIS
 
@@ -110,6 +113,11 @@ What is a web map?
 - [Anatomy of a Web Map](http://maptime.io/anatomy-of-a-web-map/), Maptime SF
 - [Intro to Web Mapping](https://github.com/maptimedet/intro-web-mapping), Maptime Detroit
 
+When should a map be interactive?
+
+- [Why We Are Doing Fewer Interactives](https://github.com/archietse/malofiej-2016/blob/master/tse-malofiej-2016-slides.pdf) by Archie Tse, New York Times
+- [Making maps, part 1: Less interactivity](http://blog.apps.chicagotribune.com/2011/03/08/making-maps-1/) by Brian Boyer
+
 Building a custom slippy map
 
 - [Leaflet Intro](http://maptimeboston.github.io/leaflet-intro/), Maptime Boston
@@ -122,6 +130,7 @@ More web maps
 
 - [Thoroughly excellent D3 tutorial](http://alignedleft.com/tutorials/d3) by Scott Murray
 - [Mapping with D3](http://alignedleft.com/tutorials/d3), Maptime Boston
+- [D3 examples gallery](https://github.com/mbostock/d3/wiki/Gallery)
 - [Mapbox](https://www.mapbox.com/) and its [guides](https://www.mapbox.com/help)
 - [CartoDB Academy](http://academy.cartodb.com/courses/design-for-beginners/)
 - [Maptime DC CartoDB tutorial](https://github.com/maptime/dc/wiki/CartoDB-Tutorial---February-23,-2016)

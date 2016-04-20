@@ -2,10 +2,20 @@ General mapping
 
 - [mapschool.io](http://mapschool.io/)
 - [Thematic Cartography Guide](http://axismaps.com/guide) by Axis Maps
+- [GIS Commons](http://giscommons.org/introduction-concepts/), an introductory textbook on geographic information systems
 - Unrequested Map Tips [part 1](http://uxblog.idvsolutions.com/2013/10/20-unrequested-map-tips-part-1.html) and [part 2](http://uxblog.idvsolutions.com/2013/11/20-unrequested-map-tips-part-2.html) by John Nelson
 - [DUSPViz](http://duspviz.mit.edu/) by Mike Foster and others
 - [Maptime Boston tutorials and resources](http://maptimeboston.github.io/resources)
 - [MaptimeHRVA meeting links and notes](https://github.com/maptime/hrva/blob/master/meetings.md)
+
+Books
+
+- Slocum et al.
+- Krygier and Wood
+- How to Lie With Maps, Monmonier
+- HMW, MacEachren
+- Semiology of Graphics
+- Cartographer's Toolkit
 
 Other resource lists
 
@@ -16,11 +26,9 @@ What is a map?
 
 - [The Lost Art of Critical Map Reading](http://www.graphicarto.com/the-lost-art-of-critical-map-reading/) by Mike Foster
 
+What is GIS? What is Cartography?
+
 Types of maps
-
-Geographic phenomena
-
-Levels of Measurement
 
 Types of thematic maps
 
@@ -51,13 +59,28 @@ Scale and generalization
 - [Generalisation of Map Data](http://www.gitta.info/Generalisati/en/html/index.html), Geographic Information Technology Trainling Alliance
 - Map generalization exercise by David Woodward (link to image)
 
+Map projections
+
+- [Projections and Coordinate Systems](http://mjfoster83.github.io/projections/index.html#/) by Mike Foster for Maptime Boston
+- [Map Projections](http://www.axismaps.com/guide/projections/) by Daniel Huffman for the Axis Maps thematic cartography guide
+
+Text
+
+Geographic phenomena
+
+Levels of Measurement
+
+Geographic data
+
 Data formats
 
+- [Spatial Data Formats](https://4326.us/maptime-data-formats/#/) by Shaun Walbridge for Maptime Boston
 - [More than you ever wanted to know about GeoJSON](http://www.macwright.org/2015/03/23/geojson-second-bite.html) by Tom MacWright
 
 Working with data
 
 - [OpenRefine tutorial](http://enipedia.tudelft.nl/wiki/Google_Refine_Tutorial), Enipedia
+- [Mapshaper](http://mapshaper.org/) and its [command line tools](https://github.com/mbloch/mapshaper), by Matthew Bloch
 
 Geocoding
 
@@ -67,6 +90,19 @@ Data sources
 
 - [Maptime DC list of data sources](https://github.com/maptime/dc/wiki/Geodata-Sources)
 - [Data sources list](http://tolomaps.com/resources/#data) maintained by Robin Tolochko
+- [Natural Earth](http://www.naturalearthdata.com/)
+
+OpenStreetMap
+
+- [OSM 101](http://maptimeboston.github.io/osm-101/#0) by Jake Wasserman for Maptime Boston
+- [Mapzen metro extracts](https://mapzen.com/data/metro-extracts/)
+- [Geofabrik OSM extracts](https://download.geofabrik.de/)
+
+QGIS
+
+- [QGIS Training Manual](http://docs.qgis.org/2.8/en/docs/training_manual/index.html)
+- [QGIS Tutorials and Tips](http://www.qgistutorials.com/en/index.html)
+- [QGIS 101](http://maptimeboston.github.io/qgis-101/#0) by Mike Foster for Maptime Boston
 
 What is a web map?
 

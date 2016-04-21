@@ -17,11 +17,13 @@ Books
 - HMW, MacEachren
 - Semiology of Graphics
 - Cartographer's Toolkit
+- Designed Maps, Brewer
 
 Other resource lists
 
 - [Resources](http://tolomaps.com/resources/) list from Robin Tolochko
 - [Geo how-to](https://github.com/nvkelso/geo-how-to) from Nathaniel Vaughn Kelso
+- [DUSPviz resources page](http://duspviz.mit.edu/resources/)
 
 What is a map?
 
@@ -64,6 +66,7 @@ Map projections
 
 - [Projections and Coordinate Systems](http://mjfoster83.github.io/projections/index.html#/) by Mike Foster for Maptime Boston
 - [Map Projections](http://www.axismaps.com/guide/projections/) by Daniel Huffman for the Axis Maps thematic cartography guide
+- [Map projection reference](http://www.radicalcartography.net/?projectionref) by Bill Rankin, grouped by use cases
 
 Text
 
@@ -86,6 +89,7 @@ Working with data
 Geocoding
 
 - [Pelias](https://github.com/pelias/pelias) by Mapzen
+- [Geocoding resources](http://tolomaps.com/resources/#geocoding) from Robin Tolochko
 
 Data sources
 
@@ -118,20 +122,26 @@ When should a map be interactive?
 - [Why We Are Doing Fewer Interactives](https://github.com/archietse/malofiej-2016/blob/master/tse-malofiej-2016-slides.pdf) by Archie Tse, New York Times
 - [Making maps, part 1: Less interactivity](http://blog.apps.chicagotribune.com/2011/03/08/making-maps-1/) by Brian Boyer
 
-Building a custom slippy map
+Building a custom map with Leaflet
 
 - [Leaflet Intro](http://maptimeboston.github.io/leaflet-intro/), Maptime Boston
+- [qgis2leaf](http://www.qgistutorials.com/en/docs/leaflet_maps_with_qgis2leaf.html) plugin for QGIS
+- [Leaflet Basics](http://joshuafrazier.info/leaflet-basics/) by Joshua Frazier for Maptime Toronto
 
 Basemaps
 
 - [Leaflet Providers Demo](https://leaflet-extras.github.io/leaflet-providers/preview/) (code and preview for various basemap tile sets)
+- [Basemaps by Stamen Design](http://maps.stamen.com/)
+- [About vector tiles](http://lyzidiamond.com/mapbox-studio/#24), a newer way to do tiled maps, in a Maptime presentation by Lyzi Diamond
+- [Details on vector tiles](http://www.macwright.org/presentations/jsgeo/#0) in a talk by Tom MacWright
 
 More web maps
 
 - [Thoroughly excellent D3 tutorial](http://alignedleft.com/tutorials/d3) by Scott Murray
 - [Mapping with D3](http://alignedleft.com/tutorials/d3), Maptime Boston
+- [Intro to D3 Web Mapping](https://github.com/maptimelex/d3-mapping), Rich Donohue
 - [D3 examples gallery](https://github.com/mbostock/d3/wiki/Gallery)
 - [Mapbox](https://www.mapbox.com/) and its [guides](https://www.mapbox.com/help)
-- [CartoDB Academy](http://academy.cartodb.com/courses/design-for-beginners/)
+- [CartoDB Map Academy](http://academy.cartodb.com/)
 - [Maptime DC CartoDB tutorial](https://github.com/maptime/dc/wiki/CartoDB-Tutorial---February-23,-2016)
 - [MaptimeATX CartoDB Exercises](http://maptimeatx.github.io/cartodb-exercises/)

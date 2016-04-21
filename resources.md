@@ -21,7 +21,7 @@ Books
 
 Other resource lists
 
-- [Resources](http://tolomaps.com/resources/) list from Robin Tolochko
+- [Resources](http://tolomaps.com/resources/) list from Robin Tolochko. Many links on this page are copied from there!
 - [Geo how-to](https://github.com/nvkelso/geo-how-to) from Nathaniel Vaughn Kelso
 - [DUSPviz resources page](http://duspviz.mit.edu/resources/)
 
@@ -133,7 +133,7 @@ Basemaps
 - [Leaflet Providers Demo](https://leaflet-extras.github.io/leaflet-providers/preview/) (code and preview for various basemap tile sets)
 - [Basemaps by Stamen Design](http://maps.stamen.com/)
 - [About vector tiles](http://lyzidiamond.com/mapbox-studio/#24), a newer way to do tiled maps, in a Maptime presentation by Lyzi Diamond
-- [Details on vector tiles](http://www.macwright.org/presentations/jsgeo/#0) in a talk by Tom MacWright
+- [Technical details on vector tiles](http://www.macwright.org/presentations/jsgeo/#0) in a talk by Tom MacWright
 
 More web maps
 

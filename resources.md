@@ -8,16 +8,18 @@ General mapping
 - [Maptime Boston tutorials and resources](http://maptimeboston.github.io/resources)
 - [MaptimeHRVA meeting links and notes](https://github.com/maptime/hrva/blob/master/meetings.md)
 - [CartoTalk](http://www.cartotalk.com/) forum hosted by NACIS
+- [How to Start Web Mapping?](http://gis.stackexchange.com/questions/8113/how-to-start-web-mapping) - message thread with a variety of suggestions for getting started in web mapping
 
 Books
 
-- Slocum et al.
-- Krygier and Wood
-- How to Lie With Maps, Monmonier
-- HMW, MacEachren
-- Semiology of Graphics
-- Cartographer's Toolkit
-- Designed Maps, Brewer
+- [Thematic Cartography and Geovisualization](http://www.amazon.com/Thematic-Cartography-Geovisualization-3rd-Edition/dp/0132298341), Terry Slocum, Robert McMaster, Fritz Kessler, Hugh Howard. Comprehensive textbook on thematic mapping.
+- [Making Maps, Second Edition: A Visual Guide to Map Design for GIS](http://www.amazon.com/Making-Maps-Second-Edition-Visual/dp/1609181662), John Krygier and Denis Wood. A beginner-friendly overview of mapping concepts and principles.
+- [How to Lie With Maps](http://www.amazon.com/How-Lie-Maps-2nd-Edition/dp/0226534219), Mark Monmonier. A good guide to the biases and agendas in maps, and how to read maps critically.
+- [How Maps Work](http://www.amazon.com/How-Maps-Work-Representation-Visualization/dp/157230040X), Alan MacEachren. For the truly ambitious map nerd, a densely detailed book on how maps and our brains work together to form meaning.
+- [Semiology of Graphics](http://www.amazon.com/Semiology-Graphics-Diagrams-Networks-Maps/dp/1589482611), Jacques Bertin. A seminal work in cartography and information design, introducing the visual variables and much more on how graphical communication works.
+- [Cartographer's Toolkit](http://gretchenpeterson.com/cartographers-toolkit.php), Gretchen Peterson. Handy reference for color palettes, typography, and other elements of map design.
+- [Designed Maps: A Sourcebook for GIS Users](http://www.amazon.com/Designed-Maps-Sourcebook-GIS-Users/dp/1589481607), Brewer. TK
+- [Web Cartography: Map Design for Interactive and Mobile Devices](http://www.amazon.com/Web-Cartography-Design-Interactive-Devices/dp/1439876223), Ian Muehlenhaus. TK
 
 Other resource lists
 
@@ -74,23 +76,23 @@ Text
 
 - [Labeling and text hierarchy in cartography](http://www.axismaps.com/guide/labeling/) from the Axis Maps guide
 
-Geographic phenomena
+Geographic phenomena and data
 
-Levels of Measurement
-
+- [Map symbolization lecture notes](http://go.owu.edu/~jbkrygie/krygier_html/geog_353/geog_353_lo/geog_353_lo08.html) by John Krygier includes examples of types of phenomena and how they can be represented.
 - [Levels of measurement](http://www.axismaps.com/guide/level_of_measurement/) from the Axis Maps guide
-
-Geographic data
+- [The Nature of Geographic Data](http://dusk.geo.orst.edu/gis/lec04_05.pdf), lecture notes from an Oregon State course
 
 Data formats
 
 - [Spatial Data Formats](https://4326.us/maptime-data-formats/#/) by Shaun Walbridge for Maptime Boston
+- [GIS file formats](https://en.wikipedia.org/wiki/GIS_file_formats), Wikipedia
 - [More than you ever wanted to know about GeoJSON](http://www.macwright.org/2015/03/23/geojson-second-bite.html) by Tom MacWright
 
 Working with data
 
 - [OpenRefine tutorial](http://enipedia.tudelft.nl/wiki/Google_Refine_Tutorial), Enipedia
 - [Mapshaper](http://mapshaper.org/) and its [command line tools](https://github.com/mbloch/mapshaper), by Matthew Bloch
+- [GDAL](http://www.gdal.org/), a utility for working with raster and vector data
 
 Geocoding
 
@@ -122,6 +124,7 @@ What is a web map?
 - [Web Maps 101](https://github.com/maptimeBoston/web-maps-101), Maptime Boston
 - [Anatomy of a Web Map](http://maptime.io/anatomy-of-a-web-map/), Maptime SF
 - [Intro to Web Mapping](https://github.com/maptimedet/intro-web-mapping), Maptime Detroit
+- [How web maps work](https://www.mapbox.com/help/how-web-maps-work/), Mapbox
 
 When should a map be interactive?
 

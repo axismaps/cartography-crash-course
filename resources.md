@@ -28,11 +28,12 @@
 - [Geo how-to](https://github.com/nvkelso/geo-how-to) from Nathaniel Vaughn Kelso
 - [DUSPviz resources page](http://duspviz.mit.edu/resources/)
 
-## What is a map?
+## What is a map? What is GIS? What is Cartography?
 
+- [Communicating Geographic Data: What is a Map?](https://www.e-education.psu.edu/geog160/node/1907), Penn State Geog 160
 - [The Lost Art of Critical Map Reading](http://www.graphicarto.com/the-lost-art-of-critical-map-reading/) by Mike Foster
-
-## What is GIS? What is Cartography?
+- [Map Purpose and Audience](https://www.e-education.psu.edu/geog486/l1_p5.html), Penn State Geog 486
+- [When Maps Shouldn't Be Maps](http://www.ericson.net/content/2011/10/when-maps-shouldnt-be-maps/), Matthew Ericson
 
 ## Types of maps
 
@@ -45,13 +46,9 @@
 - [Dot Density Maps](http://www.axismaps.com/guide/dot_density/), Axis Maps
 - [Dot Maps](https://www.e-education.psu.edu/geog486/node/1870), Penn State Geog 486
 
-## When to Map
-
-- [When Maps Shouldn't Be Maps](http://www.ericson.net/content/2011/10/when-maps-shouldnt-be-maps/), Matthew Ericson
-
 ## Hierarchy
 
-- [Visual Hierarchy](https://www.e-education.psu.edu/geog486/node/1858), Penn State online
+- [Visual Hierarchy](https://www.e-education.psu.edu/geog486/node/1858), Penn State Geog 486
 
 ## Visual Variables
 
@@ -71,7 +68,7 @@
 ## Scale and generalization
 
 - [Generalisation of Map Data](http://www.gitta.info/Generalisati/en/html/index.html), Geographic Information Technology Trainling Alliance
-- Map generalization exercise by David Woodward (link to image)
+- [Map generalization exercise](images/map_generalization.jpg) by David Woodward
 
 ## Map projections
 
@@ -103,11 +100,14 @@
 - [OpenRefine tutorial](http://enipedia.tudelft.nl/wiki/Google_Refine_Tutorial), Enipedia
 - [Mapshaper](http://mapshaper.org/) and its [command line tools](https://github.com/mbloch/mapshaper), by Matthew Bloch
 - [GDAL](http://www.gdal.org/), a utility for working with raster and vector data
+- [geojson.io](http://geojson.io), a nice web tool for creating and converting GeoJSON data
 
 ## Geocoding
 
-- [Pelias](https://github.com/pelias/pelias) by Mapzen
+- [Geocoding](https://en.wikipedia.org/wiki/Geocoding), Wikipedia
 - [Geocoding resources](http://tolomaps.com/resources/#geocoding) from Robin Tolochko
+- [Pelias](https://github.com/pelias/pelias) by Mapzen
+
 
 ## Data sources
 
@@ -115,6 +115,7 @@
 - [Data sources list](http://tolomaps.com/resources/#data) maintained by Robin Tolochko
 - [Natural Earth](http://www.naturalearthdata.com/)
 - [geojson.xyz](http://geojson.xyz/), a website and command line utility for downloading Natural Earth data
+- [DUSPviz data sources](http://duspviz.mit.edu/data/) list
 
 ## OpenStreetMap
 
@@ -125,10 +126,14 @@
 
 ## General GIS
 
+- [What is GIS?](http://www.esri.com/what-is-gis), Esri
+- [Geographic information system](https://en.wikipedia.org/wiki/Geographic_information_system), Wikipedia
 - [Geographic Information Analysis](https://www.e-education.psu.edu/geog586/) Penn State course with some general information about GIS analysis
+- [List of GIS software](https://en.wikipedia.org/wiki/List_of_geographic_information_systems_software), Wikipedia
 
 ## QGIS
 
+- [QGIS project home](http://www.qgis.org/en/site/)
 - [QGIS Training Manual](http://docs.qgis.org/2.8/en/docs/training_manual/index.html)
 - [QGIS Tutorials and Tips](http://www.qgistutorials.com/en/index.html)
 - [QGIS 101](http://maptimeboston.github.io/qgis-101/#0) by Mike Foster for Maptime Boston
@@ -149,6 +154,8 @@
 
 ## Building a custom map with Leaflet
 
+- [Leaflet examples](http://leafletjs.com/examples.html)
+- [Leaflet documentation](http://leafletjs.com/reference.html)
 - [Leaflet Intro](http://maptimeboston.github.io/leaflet-intro/), Maptime Boston
 - [qgis2leaf](http://www.qgistutorials.com/en/docs/leaflet_maps_with_qgis2leaf.html) plugin for QGIS
 - [Leaflet Basics](http://joshuafrazier.info/leaflet-basics/) by Joshua Frazier for Maptime Toronto

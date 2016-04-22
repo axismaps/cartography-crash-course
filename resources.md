@@ -33,6 +33,8 @@ What is GIS? What is Cartography?
 
 Types of maps
 
+- [What are thematic maps?](http://www.axismaps.com/guide/thematic/) from the Axis Maps guide
+
 Types of thematic maps
 
 - [Choropleth Maps](http://www.axismaps.com/guide/choropleth/), Axis Maps
@@ -70,9 +72,13 @@ Map projections
 
 Text
 
+- [Labeling and text hierarchy in cartography](http://www.axismaps.com/guide/labeling/) from the Axis Maps guide
+
 Geographic phenomena
 
 Levels of Measurement
+
+- [Levels of measurement](http://www.axismaps.com/guide/level_of_measurement/) from the Axis Maps guide
 
 Geographic data
 

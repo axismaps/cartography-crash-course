@@ -175,6 +175,7 @@
 - [Intro to D3 Web Mapping](https://github.com/maptimelex/d3-mapping), Rich Donohue
 - [Let's Make a Map](https://bost.ocks.org/mike/map/) D3 tutorial by Mike Bostock
 - [D3 examples gallery](https://github.com/mbostock/d3/wiki/Gallery)
+- [Turf](http://turfjs.org/), a JavaScript library for GIS operations
 - [Mapbox](https://www.mapbox.com/) and its [guides](https://www.mapbox.com/help)
 - [CartoDB Map Academy](http://academy.cartodb.com/)
 - [Maptime DC CartoDB tutorial](https://github.com/maptime/dc/wiki/CartoDB-Tutorial---February-23,-2016)

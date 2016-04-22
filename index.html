@@ -310,9 +310,7 @@ https://www.e-education.psu.edu/geog486/node/1858
 - Orientation
 - Texture
 
-The list has been further expanded by other researches since.
-
-
+The list has since been further expanded by other researchers.
 
 ---
 
@@ -356,13 +354,21 @@ Cartography is all about abstraction. It is not possible to show every detail, e
 
 ---
 
-## Projection
+## Projections and Coordinate Systems
 
-This is a big topic. Read this:
+The surface of the earth is curved, maps are flat. A map projection is the mathematical transformation of the Earth to a flat surface. Models of the earth called **ellipsoids** and **datums** are used as spherical surrogates for the actual surface of the earth. A **Map Projection** is the tranformation from a **3D ellipsoid** to a **2D surface**. **Coordinate systems** are measurement grids that locate specific points and apply measurements to the earth. This is the science of [Geodesy](https://en.wikipedia.org/wiki/Geodesy). *All information should be in file metadata.*
 
-http://mjfoster83.github.io/projections/index.html#/
+- Maps distort. Projections can be used to retain properties of **shape, distance, size, or direction**. One or more of these can be maintained, but not all.
 
-Mike to do, a few things to keep in mind.
+- When given **latitude and longitude**, it will most commonly use the [WGS1984](https://en.wikipedia.org/wiki/World_Geodetic_System) datum. To calculate values such as area or distance, you need to project this data.
+
+- Projections that preserve relative size are good for choropleth mapping.
+
+- [UTM (Universal Transverse Mercator)](https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system) is a global standard for minimizing distortion locally. Coordinates are in **meters**, not latitude and longitude. [Pick a zone.](http://www.dmap.co.uk/utmworld.htm) 
+
+More guidelines on projections and coordinate systems:  
+http://mjfoster83.github.io/projections/index.html#/  
+http://www.axismaps.com/guide/projections/
 
 ---
 

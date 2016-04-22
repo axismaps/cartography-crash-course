@@ -87,6 +87,7 @@
 
 ## Geographic phenomena and data
 
+- [The Nature of Geographic Information](https://www.e-education.psu.edu/natureofgeoinfo/) course from Penn State
 - [Map symbolization lecture notes](http://go.owu.edu/~jbkrygie/krygier_html/geog_353/geog_353_lo/geog_353_lo08.html) by John Krygier includes examples of types of phenomena and how they can be represented.
 - [Levels of measurement](http://www.axismaps.com/guide/level_of_measurement/) from the Axis Maps guide
 - [The Nature of Geographic Data](http://dusk.geo.orst.edu/gis/lec04_05.pdf), lecture notes from an Oregon State course
@@ -122,6 +123,10 @@
 - [Geofabrik OSM extracts](https://download.geofabrik.de/)
 - [learnOSM](http://learnosm.org/en/)
 
+## General GIS
+
+- [Geographic Information Analysis](https://www.e-education.psu.edu/geog586/) Penn State course with some general information about GIS analysis
+
 ## QGIS
 
 - [QGIS Training Manual](http://docs.qgis.org/2.8/en/docs/training_manual/index.html)
@@ -134,17 +139,20 @@
 - [Anatomy of a Web Map](http://maptime.io/anatomy-of-a-web-map/), Maptime SF
 - [Intro to Web Mapping](https://github.com/maptimedet/intro-web-mapping), Maptime Detroit
 - [How web maps work](https://www.mapbox.com/help/how-web-maps-work/), Mapbox
+- [Why tiled maps?](https://www.e-education.psu.edu/geog585/node/706), notes from a Penn State geography course
 
 ## When should a map be interactive?
 
 - [Why We Are Doing Fewer Interactives](https://github.com/archietse/malofiej-2016/blob/master/tse-malofiej-2016-slides.pdf) by Archie Tse, New York Times
 - [Making maps, part 1: Less interactivity](http://blog.apps.chicagotribune.com/2011/03/08/making-maps-1/) by Brian Boyer
+- [Interactive maps: What we know and what we need to know](http://www.josis.org/index.php/josis/article/viewArticle/105) by Robert Roth
 
 ## Building a custom map with Leaflet
 
 - [Leaflet Intro](http://maptimeboston.github.io/leaflet-intro/), Maptime Boston
 - [qgis2leaf](http://www.qgistutorials.com/en/docs/leaflet_maps_with_qgis2leaf.html) plugin for QGIS
 - [Leaflet Basics](http://joshuafrazier.info/leaflet-basics/) by Joshua Frazier for Maptime Toronto
+- [Dynamic Cartography lab assignments](https://github.com/RyanMullins/Geog461W.SP2014.Labs) by Ryan Mullins for Penn State. Comprehensive beyond just Leaflet, but includes advanced Leaflet-based mapping.
 
 ## Basemaps
 

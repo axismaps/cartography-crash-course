@@ -204,17 +204,24 @@ More guidelines on proportional symbols: http://www.axismaps.com/guide/proportio
 class: center, middle, white
 background-image: url(images/boston_dots_vote.jpg)
 
-# Dot density
+# Dot
 
 ---
 
-**Dot density maps** use points to represent counts of a geographic phenomenon. Dot Density maps rely on visual scatter to show spatial pattern.
+**Dot maps** use points to represent counts of a geographic phenomenon. Dot Density maps rely on visual scatter to show spatial pattern.
 
-- One to One Relationship  
+- **One to One Relationship**
 
-- One to Many Relationship  
+In dot maps with a one to one relationship, **one dot on the map represents one instance of a geographic phenomenon**. One to one dot maps are similar to standard reference maps in that they represent correct geographic location. Care must be taken to ensure this. Methods for determining the exact spatial location include **geocoding** (extracting a latitude from a latitude and longitude point) and **reverse geocoding**, (getting an address for a latitude and longitude point).
 
-Dot maps with a one-to-one relationship do not always represent the exact spatial location of the individual point or observation.
+- **One to Many Relationship**  
+
+In one to many relationships, **each dot on the map represents a number of phenomena**. For example, one dot is equal to 100 persons. This is called a dot density map. These maps are different in that the dots do not represent actual spatial location, but rather represent aggregated data and are randomly placed within an enumeration unit.  
+
+Some methods for placement include random, even dispersement, and unit centroid. Data is often aggregated for one or many reasons, including resolution of the dataset, privacy of the phenomena, or the number of measurements.
+
+More guidelines on dot maps:  
+http://www.axismaps.com/guide/dot_density/
 
 ---
 class: center, middle, white
@@ -224,11 +231,16 @@ background-image: url(images/contour.jpg)
 
 ---
 
-**Contour** or **isarithmic** maps interpolate values between points
+**Contour** or **isorithmic** maps interpolate values between points.
 
-- you may be less likely to make one of these, but they're seen commonly enough
+Contour maps are most recognized as useful maps for representation of elevation or depth, but they can also be used to represent more thematic phenomena, such as temperature, weather, or social phenomena through a heat map, measuring data such as crime instances or social media checkins.
 
-(not sure if this map type is really worth including here. included it initially just because it's listed as one of the main map types in the Slocum text)
+In contour maps, **isolines are linear paths along which data values of a specific variable are considered to be equal**. For example, a contour line representing ten feet would presume that at any point on that line, the elevation is ten feet. Contour maps are typically used to represent continuous data, or discrete data that is perceived as continuous. Often data when measured at discrete locations but perceived as continuous can be made into a surface through interpolation methods.
+
+Contours are usually drawn at regular intervals (i.e. 10, 20, 30, etc.) or through a binning process similar to the creation of a choropleth map.
+
+More guidelines on isorithmic maps:  
+https://en.wikipedia.org/wiki/Contour_line
 
 ---
 

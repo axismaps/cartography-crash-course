@@ -584,12 +584,13 @@ Often needs to happen when preparing data for a web map.
 Can use QGIS (demo coming up), or tools like mapshaper etc.
 
 ---
+class: center middle
 
 # Let’s make a map!
 
 ---
 
-# A basic map workflow
+## A basic map workflow
 
 1. Acquire data
 2. Clean and edit data as necessary
@@ -600,17 +601,13 @@ Can use QGIS (demo coming up), or tools like mapshaper etc.
 
 ---
 
-# GIS
+## GIS
 
-Geographic Information System
+_Geographic Information System_
 
-Wikipedia: “a system designed to capture, store, manipulate, analyze, manage, and present all types of spatial or geographical data.”
+“A system designed to capture, store, manipulate, analyze, manage, and present all types of spatial or geographical data.” ([Wikipedia](https://en.wikipedia.org/wiki/Geographic_information_system))
 
 A lot of tools, sets of tools, or operations can fall under this umbrella; however “GIS” often refers to a single piece of software.
-
----
-
-# GIS
 
 [ArcGIS](http://desktop.arcgis.com/en/) by Esri has long reigned supreme as *the* GIS software. It’s powerful, and everywhere… but also expensive.
 
@@ -618,17 +615,13 @@ A lot of tools, sets of tools, or operations can fall under this umbrella; howev
 
 ---
 
-# Let’s do it!
+## Let’s do it!
 
 We only have time for a brief look at a few of the features of QGIS. Today's purpose is to expose you to some of the core capabilities of QGIS, and to show you what GIS can do in general. Don't worry if you can't follow everything! A list of more in-depth resources and tutorials will follow.
 
 ---
 
-(just demo things in the following sections; make slides for future reference)
-
----
-
-# Data for our map
+## Data for our map
 
 We're going to make a #ratmap! It will use data from the following places:
 
@@ -748,7 +741,7 @@ There's much more to learn about QGIS (and GIS in general)!
 
 ---
 
-# Other options for static maps
+## Other options for static maps
 
 - ArcGIS 
 - R  
@@ -756,6 +749,7 @@ There's much more to learn about QGIS (and GIS in general)!
 - web tools like mapbox
 
 ---
+class: middle center
 
 # Web maps
 
@@ -800,12 +794,11 @@ Web mapping is a quickly evolving arena, technically. Your options will seem mor
 
 First, though, let's take a look at how you can **build your own web map**! It's a good way to become familiar with some of the fundamental technology involved.
 
----
+The essence of web maps is only a few things:
 
-## Web map architecture
-
-Most web maps will have at least two things: data and code. Sometimes that’s it, e.g. many NYT interactives.
-Often, a third component: a basemap (define basemap here). Sometimes that basemap IS the only data, and sometimes there is data on top of it.
+1. Data
+2. Code
+3. A basemap: a reference map on top of which data might be displayed
 
 ---
 
@@ -822,23 +815,15 @@ Learn more: [Web Maps 101](http://maptimeboston.github.io/web-maps-101/#0), [Ana
 
 ---
 
-## Building a custom slippy map
+## Let’s make a web map!
 
 [Leaflet](http://leafletjs.com) is the most popular open-source javascript library. It is lightweight and easy to use, supporting basic map interactions, tiled map layers, and vector data layers (such as geojson data). It’s a good place to start a journey of custom web mapping.
 
-(Demo a simple Leaflet map)
-
-http://maptimeboston.github.io/leaflet-intro/
-
----
-
-## Let’s make a web map!
-
 This will be a simplified demo that provides a taste of a web mapping workflow. As always, it takes a lot of learning and work to really master web maps. Learning to code is of course a big part of that, if you’re not already a coder.
 
-Fortunately, there are tons of resources and an amazing open mapping community to assist you in learning this stuff. (Many links to be provided shortly)
+Fortunately, there are tons of resources and an amazing open mapping community to assist you in learning this stuff.
 
-[Need some non-headache way to get people running local servers, or maybe there is some online sandbox?]
+Many more resource links will be provided shortly, but here's one from our Maptime chapter: http://maptimeboston.github.io/leaflet-intro/
 
 ---
 

@@ -46,6 +46,10 @@
 - [Dot Density Maps](http://www.axismaps.com/guide/dot_density/), Axis Maps
 - [Dot Maps](https://www.e-education.psu.edu/geog486/node/1870), Penn State Geog 486
 
+## Map design
+- [Design is Human](https://somethingaboutmaps.wordpress.com/2015/05/19/design-is-human/) by Daniel Huffman
+- [More Principles of Map Design](https://makingmaps.net/2008/02/05/more-principles-of-map-design/) by John Krygier
+
 ## Hierarchy
 
 - [Visual Hierarchy](https://www.e-education.psu.edu/geog486/node/1858), Penn State Geog 486

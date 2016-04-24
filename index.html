@@ -46,6 +46,9 @@
         color: black;
         font-weight: bold;
       }
+      .white strong{
+        color: white;
+      }
       li {
         margin: 10px 0;
       }
@@ -56,12 +59,16 @@
       a:hover{
         color: black;
       }
+      .white a {
+        color: white;
+      }
     </style>
   </head>
   <body>
     <textarea id="source">
 
-class: center, middle
+class: center middle white bigger
+background-image: url(images/bus.jpg)
 
 # Cartography crash course
 
@@ -76,7 +83,7 @@ class: middle
 ## Hello
 
 **Andy Woodruff**  
-Development lead and partner at Axis Maps, board of directors of the North American Cartographic Information Society (NACIS), mapper of Boston things, and general internet loudmouth about cartography  
+Development lead and partner at Axis Maps, board of directors of the North American Cartographic Information Society (NACIS), mapper of Boston things, and general promoter of cartography  
 [@awoodruff](http://twitter.com/awoodruff) | [andywoodruff.com](http://andywoodruff.com)
 
 **Mike Foster**:  
@@ -92,9 +99,9 @@ class: middle
 
 This is a cartographic crash course. Mastery of mapping takes a lot of learning—and a lot more than a few hours!
 
-Today's goal is to provide a hands-on introduction to some common mapping concepts, data, and technologies, and to provide resources for further learning.
+Today's goal is to provide a hands-on introduction to some common mapping concepts, data, and open-source technologies, and to provide resources for further learning.
 
-Many of these slides contain information that we won't spend much time on today. We're going to introduce some topics only briefly, leaving the slides as future reference.
+Many of these slides contain information that we can't spend much time on today. We're going to introduce some topics only briefly, leaving the slides and resources list as future reference.
 
 ---
 class: bigger, middle
@@ -110,7 +117,8 @@ class: bigger, middle
 4. Interactive (web) map workflows
 
 ---
-class: center, middle
+class: center, middle white
+background-image: url(images/heartmaps.jpg)
 
 # What is a map?
 
@@ -136,8 +144,6 @@ class: bigger
 **Reference maps** emphasize the **location** of spatial phenomena, e.g. topographic maps or road maps.
 
 **Thematic maps** emphasize the **spatial pattern** of geographic attributes, e.g. population density or income.
-
-When making a thematic map in particular, it's important to understand the nature of the geographic phenomena being mapped.
 
 ---
 background-image: url(images/reference.png)
@@ -227,7 +233,7 @@ background-image: url(images/contour.jpg)
 
 ---
 
-**Contour** or **isorithmic** maps interpolate values between points.
+**Contour** or **isarithmic** maps interpolate values between points.
 
 Contour maps are most recognized as useful maps for representation of elevation or depth, but they can also be used to represent more thematic phenomena, such as temperature, weather, or social phenomena through a heat map, measuring data such as crime instances or social media checkins.
 
@@ -235,7 +241,7 @@ In contour maps, **isolines are linear paths along which data values of a specif
 
 Contours are usually drawn at regular intervals (i.e. 10, 20, 30, etc.) or through a binning process similar to the creation of a choropleth map.
 
-More guidelines on isorithmic maps:  
+More guidelines on isarithmic maps:  
 https://en.wikipedia.org/wiki/Contour_line
 
 ---
@@ -260,13 +266,13 @@ background-image: url(images/mapdesign.jpg)
 
 - **Medium.** Many design decisions depend on how the map will be displayed, usually meaning either on paper or on a digital device. (And in the digital realm, either on desktop screens or small mobile devices.) Sometimes a map needs to work for several different media, which can mean several sets of designs.
 
-- **Interaction.** Static maps are printed or displayed as digital images, with no user interaction beyond simply _looking_ at the map. Interactive maps are digital maps that can be changed or manipulated in some way by the map reader. The difference can be huge in terms of design. The first chunk of this workshop will focus on static maps, and the second on interactive.
+- **Audience and purpose**. _What_ you intend to accomplish and for _whom_ are huge drivers of map design. For example, if you're mapping for an expert audience, the map can probably be more complex than if it's meant for the general public.
 
 - **Map-worthiness.** Just because data *can* be mapped doesn't mean it *should* be mapped! It's always important to think about whether geography is important to your story. If not, [consider other ways to visualize it](http://www.ericson.net/content/2011/10/when-maps-shouldnt-be-maps/), or simply provide a table.
 
 ---
 
-## Map medium
+## Map interaction
 
 #### Static Map
 
@@ -356,6 +362,8 @@ Also, **normalize your data**. Densities and ratios are more meaningful in findi
 class: center middle
 
 ![](images/normalize_data.png)
+
+.citation[[xkcd](https://xkcd.com/1138/)]
 
 ---
 
@@ -569,6 +577,7 @@ Geocoding, honestly, is _hard_ because addresses are not simple. People have put
 
 ---
 class: center middle white
+background-image: url(images/download.png)
 
 # Data sources
 
@@ -603,8 +612,6 @@ Quick downloads of GeoJSON: http://geojson.xyz/
 [US Census TIGER/Line files](https://www.census.gov/cgi-bin/geo/shapefiles/index.php) are a good source of Census geographies (tracts, etc.) as well as other reference shapes. Some have basic demographic data attached, while others may require table joins to get data.
 
 Many states, cities, or other local entities have GIS data repositories. In Massachusetts, we have [MassGIS](http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/layerlist.html), city GIS data (for example [Cambridge's](https://www.cambridgema.gov/GIS/gisdata)), and general open data sites like those of [Boston](https://data.cityofboston.gov/), [Cambridge](https://data.cambridgema.gov/), and [Somerville](https://data.somervillema.gov/).
-
-(is there a good place to start for state/local gov't data? or just google it?)
 
 ---
 class: bigger
@@ -685,14 +692,6 @@ There's a lot going on in QGIS. But most of the time, for basic mapping, you'll 
 
 ---
 
-## Layers
-
-Most maps in GIS are organized in terms of **layers**. Each layer represents a geographic data set (e.g., country outlines or city points), or some kind of annotation. Generally, they are shown in a list stacked in the same order as they are drawn on the map (i.e., bottom layer on the bottom, top layer on the top).
-
-![GIS layers](images/layers.jpg)
-
----
-
 ## Importing data
 
 Typical geographic data formats can be opened directly in QGIS, through the "Add Layer" menu or toolbar, or simply by dragging and dropping. QGIS [supports lots of data formats!](https://docs.qgis.org/2.2/en/docs/user_manual/working_with_vector/supported_data.html)
@@ -705,8 +704,17 @@ Another common way to get data into a map is with a **table join**. In this case
 
 ## Visualizing Data
 
-See your stuff.  
-Make sure your file works.
+The first task with data in GIS is often simply to see what it looks like, and make sure the file works and contains what was expected. Once you open a data file, it will automatically be drawn with some default styles.
+
+![](images/seedata.jpg)
+
+---
+
+## Layers
+
+Most maps in GIS are organized in terms of **layers**. Each layer represents a geographic data set (e.g., country outlines or city points), or some kind of annotation. Generally, they are shown in a list stacked in the same order as they are drawn on the map (i.e., bottom layer on the bottom, top layer on the top).
+
+![GIS layers](images/layers.jpg)
 
 ---
 
@@ -827,7 +835,7 @@ Web maps are like static maps in many ways. All the same design considerations w
 - Does the map function smoothly? Don't push technology too far if it will crash browsers and melt phones.
 - Is the map readable and usable on various media, from mobile devices to large desktop screens?
 
-There is much more to say about web map design. (need awesome resource links here)
+There is much more to say about web map design! We will provide further resources soon.
 
 ---
 
@@ -1047,19 +1055,21 @@ With more coding, you can do awesome things! Perhaps a [choropleth map](http://b
 
 The beauty of something like Leaflet is that it provides a basic framework upon which you can build amazing maps with your own data, creatvity, and coding cleverness. The key to mastering web maps is not necessarily learning how to use specific libraries—that's often the easy part—but being comfortable with code and geographic data in general.
 
+We have only provided a glimpse of the technical side of Leaflet and web maps today. If you're not already comfortable with web development, resources like Mike's [web map workshop](http://duspviz.mit.edu/web-map-workshop/) can help build up skills necessary for advanced web mapping.
+
 ---
 
 ## Additional options for web maps
 
-- [**D3**](https://d3js.org/): very powerful JavaScript library for expressive data visualization, including many built-in mapping functions. It has a steeper learning curve, but is well-documented with many [examples](https://github.com/mbostock/d3/wiki/Gallery) and [tutorials](http://alignedleft.com/tutorials/d3) out there.
+- **[D3](https://d3js.org/)** - very powerful JavaScript library for expressive data visualization, including many built-in mapping functions. It has a steeper learning curve, but is well-documented with many [examples](https://github.com/mbostock/d3/wiki/Gallery) and [tutorials](http://alignedleft.com/tutorials/d3) out there.
 
-- [**Mapbox**](https://www.mapbox.com/) - A company on the cutting edge of web mapping, offering a whole platform and suite of tools. Especially good for designing and hosting global maps based on OpenStreetMap.
+- **[Mapbox](https://www.mapbox.com/)** - A company on the cutting edge of web mapping, offering a whole platform and suite of tools. Especially good for designing and hosting global maps based on OpenStreetMap.
 
-- [**CartoDB**](https://cartodb.com/) - Web-based tool for plugging your data into a map quickly and easily, but also with many powerful capabilities. We highly recommend this if you're looking for the most painless way of turning your data into a web map.
+- **[CartoDB](https://cartodb.com/)** - Web-based tool for plugging your data into a map quickly and easily, but also with many powerful capabilities. We highly recommend this if you're looking for the most painless way of turning your data into a web map.
 
-- [**OpenLayers**](http://openlayers.org/) - Another open-source web mapping library, similar to Leaflet in some ways. It's more feature heavy and has been around a while, with a lot of contributors behind it.
+- **[OpenLayers](http://openlayers.org/)** - Another open-source web mapping library, similar to Leaflet in some ways. It's more feature heavy and has been around a while, with a lot of contributors behind it.
 
-- [**ArcGIS Online**](http://www.arcgis.com/features/) - Esri's product, intended as an easy, user-friendly way to make and share maps with your data. But, like their desktop software, it's geared more toward larger organizations than the open web, and doesn't have a free tier.
+- **[ArcGIS Online](http://www.arcgis.com/features/)** - Esri's product, intended as an easy, user-friendly way to make and share maps with your data. But, like their desktop software, it's geared more toward larger organizations than the open web, and doesn't have a free tier.
 
 ---
 
@@ -1108,22 +1118,15 @@ There are several awesome mapping conferences coming up:
 
 There are many, many resources for learning about mapping. We've mentioned a few in the course of this workshop, but have compiled a more comprehensive list to go along with all the topics covered today.
 
-Go forth and learn!  
-**[Cartography Crash Course Resources list](resources.html)**
+Go forth and learn!
 
----
+.bigger[  
+**[Cartography Crash Course Resources list](resources.html)**  
+axismaps.io/crash-course/resources.html]
 
-## links
+Happy mapping!  
+.citation[Andy and Mike]
 
-(not yet added to resources page)
-
-https://docs.google.com/document/d/1pjrX7F3w9X1987aAtSvR88aa_UM9YnMfxmr5qDUi6Pc/edit?usp=sharing
-
-http://maptimeatx.github.io/intro-to-turf/
-
-http://esri.github.io/esri-leaflet/
-
-https://github.com/Esri/geodev-hackerlabs/blob/gh-pages/develop/locate_query_leaflet.md
 
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">

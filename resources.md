@@ -3,11 +3,13 @@
 The following resources—articles, tools, tutorials, and more—accompany the [Cartography Crash Course](index.html) workshop from OpenVis Conf 2016, by [Andy Woodruff](http://andywoodruff.com) and [Mike Foster](http://www.mjfoster.net/). They are categorized according to topics covered in the workshop, and offer some paths to learning about those topics in much more detail.
 
 ## Other resource lists  
-(Many of the links on this page were copied from resource lists that others have diligently compiled.)
+Many of the links on this page were copied from resource lists that others have diligently compiled. In those cases we've plucked some mostly on the educational side of things. Visit these lists for much more, especially for links to technical tools and resources!
 
 - [Resources](http://tolomaps.com/resources/) list from Robin Tolochko.
 - [Geo how-to](https://github.com/nvkelso/geo-how-to) from Nathaniel Vaughn Kelso
 - [DUSPviz resources page](http://duspviz.mit.edu/resources/)
+- [Maptime Boston tutorials and resources](http://maptimeboston.github.io/resources)
+- [MaptimeHRVA meeting links and notes](https://github.com/maptime/hrva/blob/master/meetings.md)
 
 ## General mapping
 
@@ -16,22 +18,22 @@ The following resources—articles, tools, tutorials, and more—accompany the [
 - [Thematic Cartography Guide](http://axismaps.com/guide) by Axis Maps
 - [GIS Commons](http://giscommons.org/introduction-concepts/), an introductory textbook on geographic information systems
 - [Unrequested Map Tips](http://uxblog.idvsolutions.com/2013/10/20-unrequested-map-tips-part-1.html) and [part 2](http://uxblog.idvsolutions.com/2013/11/20-unrequested-map-tips-part-2.html) by John Nelson
-- [DUSPViz](http://duspviz.mit.edu/) by Mike Foster and others
-- [Maptime Boston tutorials and resources](http://maptimeboston.github.io/resources)
-- [MaptimeHRVA meeting links and notes](https://github.com/maptime/hrva/blob/master/meetings.md)
+- [DUSPViz](http://duspviz.mit.edu/), mostly by Mike Foster
 - [CartoTalk](http://www.cartotalk.com/) forum hosted by NACIS
 - [How to Start Web Mapping?](http://gis.stackexchange.com/questions/8113/how-to-start-web-mapping) - message thread with a variety of suggestions for getting started in web mapping
+- [List of map-related blogs](https://docs.google.com/document/d/1pjrX7F3w9X1987aAtSvR88aa_UM9YnMfxmr5qDUi6Pc/edit?usp=sharing), publicly editable
 
 ## Books
 
 - [Thematic Cartography and Geovisualization](http://www.amazon.com/Thematic-Cartography-Geovisualization-3rd-Edition/dp/0132298341), Terry Slocum, Robert McMaster, Fritz Kessler, Hugh Howard. Comprehensive textbook on thematic mapping.
 - [Making Maps, Second Edition: A Visual Guide to Map Design for GIS](http://www.amazon.com/Making-Maps-Second-Edition-Visual/dp/1609181662), John Krygier and Denis Wood. A beginner-friendly overview of mapping concepts and principles.
+- [Elements of Cartography](http://www.amazon.com/Elements-Cartography-Arthur-H-Robinson/dp/0471555797), Arthur Robinson, Joel Morrison, A Jon Kimerling, Stephen Guptill. A longtime standard cartography textbook.
 - [How to Lie With Maps](http://www.amazon.com/How-Lie-Maps-2nd-Edition/dp/0226534219), Mark Monmonier. A good guide to the biases and agendas in maps, and how to read maps critically.
 - [How Maps Work](http://www.amazon.com/How-Maps-Work-Representation-Visualization/dp/157230040X), Alan MacEachren. For the truly ambitious map nerd, a densely detailed book on how maps and our brains work together to form meaning.
 - [Semiology of Graphics](http://www.amazon.com/Semiology-Graphics-Diagrams-Networks-Maps/dp/1589482611), Jacques Bertin. A seminal work in cartography and information design, introducing the visual variables and much more on how graphical communication works.
 - [Cartographer's Toolkit](http://gretchenpeterson.com/cartographers-toolkit.php), Gretchen Peterson. Handy reference for color palettes, typography, and other elements of map design.
-- [Designed Maps: A Sourcebook for GIS Users](http://www.amazon.com/Designed-Maps-Sourcebook-GIS-Users/dp/1589481607), Brewer. TK
-- [Web Cartography: Map Design for Interactive and Mobile Devices](http://www.amazon.com/Web-Cartography-Design-Interactive-Devices/dp/1439876223), Ian Muehlenhaus. TK
+- [Designed Maps: A Sourcebook for GIS Users](http://www.amazon.com/Designed-Maps-Sourcebook-GIS-Users/dp/1589481607), Cynthia Brewer. A guide to good map design using GIS.
+- [Web Cartography: Map Design for Interactive and Mobile Devices](http://www.amazon.com/Web-Cartography-Design-Interactive-Devices/dp/1439876223), Ian Muehlenhaus. One of the precious few texts on map design specifically for the interactive, digital, and mobile age.
 
 ## What is a map? What is GIS? What is Cartography?
 
@@ -68,6 +70,8 @@ The following resources—articles, tools, tutorials, and more—accompany the [
 
 - [ColorBrewer](http://colorbrewer.org), Cindy Brewer + Axis Maps
 - [Using Colors on Thematic Maps](http://www.axismaps.com/guide/color_schemes/), Axis Maps
+- [Using COlor in Maps](http://visual.ly/using-color-maps) - handy guide compiled from work by John Krygier
+- [Map Color Resources](https://makingmaps.net/2007/07/16/map-color-resources/)
 
 ## Data Classification
 
@@ -79,6 +83,8 @@ The following resources—articles, tools, tutorials, and more—accompany the [
 
 - [Generalisation of Map Data](http://www.gitta.info/Generalisati/en/html/index.html), Geographic Information Technology Trainling Alliance
 - [Map generalization exercise](images/map_generalization.jpg) by David Woodward
+- [ScaleMaster](http://www.personal.psu.edu/mzs114/ScaleMaster/ScaleMasterv0.html) - Flash-based interactive tool from some Penn State research about designing multiscale maps
+- [Zoom levels, pixel sizes, and scales, oh my](http://www.gretchenpeterson.com/blog/archives/3260) - a bit about how scale works on web maps Gretchen Peterson
 
 ## Map projections
 
@@ -86,6 +92,8 @@ The following resources—articles, tools, tutorials, and more—accompany the [
 - [Projections and Coordinate Systems](http://mjfoster83.github.io/projections/index.html#/) by Mike Foster for Maptime Boston
 - [Map Projections](http://www.axismaps.com/guide/projections/) by Daniel Huffman for the Axis Maps thematic cartography guide
 - [Map projection reference](http://www.radicalcartography.net/?projectionref) by Bill Rankin, grouped by use cases
+- [Why Mercator](https://gist.github.com/tmcw/a3828827c8490f7e13a9) - Tom MacWright explains why the Mercator projection is used for web maps
+- [Map projections and distortions](http://www.geography.hunter.cuny.edu/~jochen/GTECH361/lectures/lecture04/concepts/Map%20coordinate%20systems/Map%20projections%20and%20distortion.htm), Hunter College
 
 ## Text
 
@@ -186,6 +194,7 @@ The following resources—articles, tools, tutorials, and more—accompany the [
 - [Intro to D3 Web Mapping](https://github.com/maptimelex/d3-mapping), Rich Donohue
 - [Let's Make a Map](https://bost.ocks.org/mike/map/) D3 tutorial by Mike Bostock
 - [D3 examples gallery](https://github.com/mbostock/d3/wiki/Gallery)
+- [D3 Workshop](http://duspviz.mit.edu/d3-workshop/) for DUSPviz by Mike Foster
 - [Turf](http://turfjs.org/), a JavaScript library for GIS operations
 - [Mapbox](https://www.mapbox.com/) and its [guides](https://www.mapbox.com/help)
 - [CartoDB Map Academy](http://academy.cartodb.com/)

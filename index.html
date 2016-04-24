@@ -595,45 +595,16 @@ Often, this is how you find what you're looking for:
 
 ---
 
-## Let’s get some data!
-
-(Grab some NE base data, OSM roads, and something thematic)
-
----
-
 ## Working with data
 
-Typical things we might want to do with data before the final map:
+Once you have data, you might need to do some things to it before turning it into a map. Some typical tasks and tools:
 
-Clean it up
-
-Calculate values (e.g. pop density)
-
-Categorize, filter, etc.
-
-Spatial operations (geoprocessing)
-
----
-
-## Tools for working with data
-
-Spreadsheets
-
-Text editors (the power of find &amp; replace, and regex!)
-
-Database tools and commands
-
-GIS (we’ll get to this in a moment)
-
-(links to some tools)
-
----
-
-## Converting between data formats
-
-Often needs to happen when preparing data for a web map.
-
-Can use QGIS (demo coming up), or tools like mapshaper etc.
+- **Clean it up** using a tool like [OpenRefine](https://github.com/OpenRefine/OpenRefine/wiki/Documentation-For-Users).
+- Use **spreadheet** software (Excel, Google Sheets, LibreOffice, and so forth) to make calculations, format values, filter and categorize, etc.
+- **Simplify** geometry using [Mapshaper](http://mapshaper.org/). This is almost always a good idea unless your data was already designed for the map scale you will use.
+- Perform **spatial operations** using command-line tools (e.g. [GDAL](http://www.gdal.org/) or [Mapshaper's command line interface]((https://github.com/mbloch/mapshaper)) or GIS software (which we'll demo shortly).
+- Use a **text editor** to manipulate a variety of things. Find-and-replace and [regular expressions](https://en.wikipedia.org/wiki/Regular_expression) can be your best friends.
+- **Convert** between different formats using tools such as [Mapshaper](https://github.com/mbloch/mapshaper), [geojson.io](http://geojson.io/), [ogr2ogr](http://www.gdal.org/ogr2ogr.html), or GIS.
 
 ---
 class: center middle

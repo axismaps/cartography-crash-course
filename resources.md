@@ -1,3 +1,14 @@
+# Cartography Crash Course resources
+
+The following resources—articles, tools, tutorials, and more—accompany the [Cartography Crash Course](index.html) workshop from OpenVis Conf 2016, by [Andy Woodruff](http://andywoodruff.com) and [Mike Foster](http://www.mjfoster.net/). They are categorized according to topics covered in the workshop, and offer some paths to learning about those topics in much more detail.
+
+## Other resource lists  
+(Many of the links on this page were copied from resource lists that others have diligently compiled.)
+
+- [Resources](http://tolomaps.com/resources/) list from Robin Tolochko.
+- [Geo how-to](https://github.com/nvkelso/geo-how-to) from Nathaniel Vaughn Kelso
+- [DUSPviz resources page](http://duspviz.mit.edu/resources/)
+
 ## General mapping
 
 - [Cartography and Visualization](https://www.e-education.psu.edu/geog486/) course website, Penn State
@@ -21,12 +32,6 @@
 - [Cartographer's Toolkit](http://gretchenpeterson.com/cartographers-toolkit.php), Gretchen Peterson. Handy reference for color palettes, typography, and other elements of map design.
 - [Designed Maps: A Sourcebook for GIS Users](http://www.amazon.com/Designed-Maps-Sourcebook-GIS-Users/dp/1589481607), Brewer. TK
 - [Web Cartography: Map Design for Interactive and Mobile Devices](http://www.amazon.com/Web-Cartography-Design-Interactive-Devices/dp/1439876223), Ian Muehlenhaus. TK
-
-## Other resource lists
-
-- [Resources](http://tolomaps.com/resources/) list from Robin Tolochko. Many links on this page are copied from there!
-- [Geo how-to](https://github.com/nvkelso/geo-how-to) from Nathaniel Vaughn Kelso
-- [DUSPviz resources page](http://duspviz.mit.edu/resources/)
 
 ## What is a map? What is GIS? What is Cartography?
 
@@ -173,7 +178,7 @@
 - [About vector tiles](http://lyzidiamond.com/mapbox-studio/#24), a newer way to do tiled maps, in a Maptime presentation by Lyzi Diamond
 - [Technical details on vector tiles](http://www.macwright.org/presentations/jsgeo/#0) in a talk by Tom MacWright
 
-## More web maps
+## More on web maps
 
 - [Thoroughly excellent D3 tutorial](http://alignedleft.com/tutorials/d3) by Scott Murray
 - [Mapping with D3](http://alignedleft.com/tutorials/d3), Maptime Boston

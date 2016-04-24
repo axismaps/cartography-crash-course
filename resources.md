@@ -54,6 +54,7 @@ The following resources—articles, tools, tutorials, and more—accompany the [
 ## Map design
 - [Design is Human](https://somethingaboutmaps.wordpress.com/2015/05/19/design-is-human/) by Daniel Huffman
 - [More Principles of Map Design](https://makingmaps.net/2008/02/05/more-principles-of-map-design/) by John Krygier
+- [Easy Steps to Better Maps](http://duspviz.mit.edu/tutorials/making-better-maps/) by Mike Foster
 
 ## Hierarchy
 

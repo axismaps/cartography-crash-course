@@ -85,6 +85,7 @@
 
 - [Labeling and text hierarchy in cartography](http://www.axismaps.com/guide/labeling/) from the Axis Maps guide
 - [Labeling and Text concept gallery](https://www.e-education.psu.edu/geog486/l3_p7.html), Penn State Geog 486
+- [Maps and Prose](http://maphugger.com/post/75374571098/practical-cartography-maps-and-prose) by Marty Elmer
 
 ## Geographic phenomena and data
 
